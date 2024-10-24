@@ -9,113 +9,113 @@ using CORE.DTO;
 
 namespace Servicios.Servicios
 {
-    //Se comenta para evitar duplicidad
-    //public interface IEmpleado
-    //{
-    //    Task<int> Agregar(EmpleadoDTO Empleado);
-    //    Task<bool> Eliminar(int id);
-    //    Task<int> Modificar(EmpleadoDTOConId Empleado);
+    
+    public interface ILlegadaTarde
+    {
+        Task<int> Agregar(LlegadaTardeDTO LlegadaTarde);
+        Task<bool> Eliminar(int id);
+        Task<int> Modificar(LlegadaTardeDTOConId LlegadaTarde);
 
-    //    Task<EmpleadoDTOConId> ObtenerIndividual(int id);
-
-    //    Task<List<EmpleadoDTOConId>> Obtener();
+    //    Task<LlegadaTardeDTOConId> ObtenerIndividual(int id);
+   
+    //    Task<List<LlegadaTardeDTOConId>> Obtener();
     //}
 
-    //public class EmpleadoServicio : IEmpleado
+    //public class LlegadaTardeServicio : ILlegadaTarde
     //{
     //    private readonly BdRrhhContext _db;
+    
 
-
-    //    public EmpleadoServicio(BdRrhhContext db)
+    //    public LlegadaTardeServicio(BdRrhhContext db)
     //    {
     //        _db = db;
     //    }
 
-    //    public async Task<int> Agregar(EmpleadoDTO Empleado)
+    //    public async Task<int> Agregar(LlegadaTardeDTO LlegadaTarde)
     //    {
 
 
     //        //fluentValidation
-    //        var validador = new EmpleadoAgregarValidador();
-    //        var validadorResultado = validador.Validate(Empleado);
+    //        var validador = new LlegadaTardeAgregarValidador();
+    //        var validadorResultado = validador.Validate(LlegadaTarde);
 
 
 
 
 
     //        //mapster
-    //        var nuevaEmpleado = Empleado.Adapt<Data.Models.Empleado>();
-    //        await _db.Empleado.AddAsync(nuevaEmpleado).ConfigureAwait(false);
+    //        var nuevaLlegadaTarde = LlegadaTarde.Adapt<Data.Models.LlegadaTarde>();
+    //        await _db.LlegadaTarde.AddAsync(nuevaLlegadaTarde).ConfigureAwait(false);
     //        await _db.SaveChangesAsync().ConfigureAwait(false);
-    //        return nuevaEmpleado.Id;
+    //        return nuevaLlegadaTarde.Id;
 
     //    }
 
-    //    public async Task<int> Modificar(EmpleadoDTOConId Empleado)
+    //    public async Task<int> Modificar(LlegadaTardeDTOConId LlegadaTarde)
     //    {
-    //        var validador = new EmpleadoModificarValidador();
-    //        var validadorResultado = validador.Validate(Empleado);
+    //        var validador = new LlegadaTardeModificarValidador();
+    //        var validadorResultado = validador.Validate(LlegadaTarde);
 
-    //        // Validar la Empleado
+    //        // Validar la LlegadaTarde
     //        if (!validadorResultado.IsValid)
     //        {
     //            return -1;
     //        }
 
-    //        var EmpresaModelo = await _db.Empleado.FirstOrDefaultAsync(x => x.Id == Empleado.Id).ConfigureAwait(false);
+    //        var EmpresaModelo = await _db.LlegadaTarde.FirstOrDefaultAsync(x => x.Id == LlegadaTarde.Id).ConfigureAwait(false);
 
-    //        if (EmpleadoModelo == null)
+    //        if (LlegadaTardeModelo == null)
     //        {
     //            return -1;
     //        }
 
-    //        EmpleadoModelo.Nombre = Empleado.Nombre;
-    //        EmpleadoModelo.apellido = Empleado.apellido;
-    //        EmpleadoModelo.legajo = Empleado.legajo;
-    //        EmpleadoModelo.email = Empleado.Email;
-    //        EmpleadoModelo.edad = Empleado.Edad;
-    //        Empleado.Modelo.Puesto = Empleado.Puesto;
+    //        LlegadaTardeModelo.Nombre = LlegadaTarde.Nombre;
+    //        LlegadaTardeModelo.apellido = LlegadaTarde.apellido;
+    //        LlegadaTardeModelo.legajo = LlegadaTarde.legajo;
+    //        LlegadaTardeModelo.email = LlegadaTarde.Email;
+    //        LlegadaTardeModelo.edad = LlegadaTarde.Edad;
+    //        LlegadaTarde.Modelo.Puesto = LlegadaTarde.Puesto;
 
 
 
 
     //        await _db.SaveChangesAsync().ConfigureAwait(false);
 
-    //        return EmpleadoModelo.Id;
+    //        return LlegadaTardeModelo.Id;
     //    }
 
 
     //    public async Task<bool> Eliminar(int id)
     //    {
-    //        var EmpleadoModelo = _db.Empleado.FirstOrDefault(x => x.Id == id);
+    //        var LlegadaTardeModelo = _db.LlegadaTarde.FirstOrDefault(x => x.Id == id);
 
     //        if (EmpresaModelo != null)
     //        {
-    //            _db.Empleado.Remove(EmpleadoModelo);
+    //            _db.LlegadaTarde.Remove(LlegadaTardeModelo);
     //            await _db.SaveChangesAsync().ConfigureAwait(false);
     //            return true;
     //        }
 
-    //        throw new Exception("No es posible encontrar esa Empleado");
+    //        throw new Exception("No es posible encontrar esa LlegadaTarde");
     //    }
 
     //    public async Task<List<EmpresaDTOConId>> Obtener()
     //    {
-    //        var Empleado = _db.Empleado.ToList();
-    //        return Empleado.Adapt<List<EmpresaDTOConId>>();
+    //        var LlegadaTarde = _db.LlegadaTarde.ToList();
+    //        return LlegadaTarde.Adapt<List<EmpresaDTOConId>>();
 
-    //    }
+        }
 
-    //    public async Task<EmpresaDTOConId> ObtenerIndividual(int id)
-    //    {
-    //        var EmpresaModelo = _db.Empleado.FirstOrDefault(x => x.Id == id);
+    public async Task<EmpresaDTOConId> ObtenerIndividual(int id)
+        {
+            var EmpresaModelo = _db.LlegadaTarde.FirstOrDefault(x => x.Id == id);
 
-    //        if (EmpresaModelo != null)
-    //        {
-    //            return EmpresaModelo.Adapt<EmpresaDTOConId>();
-    //        }
+            if (EmpresaModelo != null)
+            {
+                return EmpresaModelo.Adapt<EmpresaDTOConId>();
+            }
 
-    //        throw new Exception("No es posible encontrar esa Empleado");
-    //    }
-    //}
+            throw new Exception("No es posible encontrar esa LlegadaTarde");
+        }
+    }
 }
