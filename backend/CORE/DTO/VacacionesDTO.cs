@@ -25,5 +25,5 @@ namespace CORE.DTO
         public int Id { get; set; }
     }
 }
-}
+
 

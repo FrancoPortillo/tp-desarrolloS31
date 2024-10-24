@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {}
+    "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\CORE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
+    "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\CORE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
+        "projectUniqueName": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\CORE.csproj",
         "projectName": "CORE",
-        "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
-        "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\obj\\",
+        "projectPath": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\CORE.csproj",
+        "packagesPath": "C:\\Users\\FRanco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FRanco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
