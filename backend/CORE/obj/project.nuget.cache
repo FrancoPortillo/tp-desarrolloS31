@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OMpXwCN2/gk=",
+  "dgSpecHash": "5r5kjErmvv8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\SistemaGestion\\backend\\CORE\\CORE.csproj",
+  "projectFilePath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512"
