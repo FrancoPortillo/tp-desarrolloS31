@@ -1,0 +1,12 @@
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\bin\Debug\net8.0\Servicios.deps.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\bin\Debug\net8.0\Servicios.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\bin\Debug\net8.0\Servicios.pdb
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfoInputs.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfo.cs
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\refint\Servicios.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.pdb
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\ref\Servicios.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\Servicios\obj\Debug\net8.0\Servicios.csproj.AssemblyReference.cache

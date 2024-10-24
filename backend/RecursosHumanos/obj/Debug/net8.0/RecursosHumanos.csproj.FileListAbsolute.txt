@@ -1,0 +1,42 @@
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\appsettings.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\RecursosHumanos.exe
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\RecursosHumanos.deps.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\RecursosHumanos.runtimeconfig.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\RecursosHumanos.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\RecursosHumanos.pdb
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.csproj.AssemblyReference.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.AssemblyInfoInputs.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.AssemblyInfo.cs
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.csproj.CoreCompileInputs.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets\msbuild.RecursosHumanos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets\msbuild.build.RecursosHumanos.props
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RecursosHumanos.props
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RecursosHumanos.props
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\scopedcss\bundle\RecursosHumanos.styles.css
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\Recursos.B20A225E.Up2Date
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\refint\RecursosHumanos.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.pdb
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.genruntimeconfig.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\RecursosHumanos\obj\Debug\net8.0\ref\RecursosHumanos.dll
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.dll
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\refint\RecursosHumanos.dll
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.pdb
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.csproj.AssemblyReference.cache
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\SistemaGestion\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.MvcApplicationPartsAssemblyInfo.cache

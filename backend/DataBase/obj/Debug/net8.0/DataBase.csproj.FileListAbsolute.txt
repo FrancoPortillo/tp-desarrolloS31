@@ -1,0 +1,14 @@
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\bin\Debug\net8.0\DataBase.runtimeconfig.json
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.csproj.AssemblyReference.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\DataBase.genruntimeconfig.cache
+C:\Users\ariag\source\repos\ProyectoGestionDesarrollo\DataBase\obj\Debug\net8.0\ref\DataBase.dll
