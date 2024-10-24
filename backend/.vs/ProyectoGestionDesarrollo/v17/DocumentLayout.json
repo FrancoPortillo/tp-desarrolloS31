@@ -1,46 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\",
+  "WorkspaceRootPath": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\core\\dto\\vacacionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\core\\dto\\vacacionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\vacacionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\core\\dto\\llegadatardedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\llegadatardedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\core\\dto\\empresadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\empresadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\llegadatardeservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\llegadatardeservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\core\\dto\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\empresaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\empresaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\core\\dto\\asistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\asistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\empleadoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\empleadoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\database\\contexto\\bdrrhhcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\contexto\\bdrrhhcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\database\\models\\vacaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\vacaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\database\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\franco\\desktop\\tp-desarrollo\\backend\\servicios\\servicios.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,140 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "VacacionesDTO.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\VacacionesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\CORE\\DTO\\VacacionesDTO.cs",
               "RelativeDocumentMoniker": "CORE\\DTO\\VacacionesDTO.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\VacacionesDTO.cs",
+              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\CORE\\DTO\\VacacionesDTO.cs",
               "RelativeToolTip": "CORE\\DTO\\VacacionesDTO.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA5wBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:45:16.672Z",
+              "WhenOpened": "2024-10-24T14:45:50.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LLegadaTardeDTO.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\LLegadaTardeDTO.cs",
-              "RelativeDocumentMoniker": "CORE\\DTO\\LLegadaTardeDTO.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\LLegadaTardeDTO.cs",
-              "RelativeToolTip": "CORE\\DTO\\LLegadaTardeDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "VacacionesServicio.cs",
+              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\VacacionesServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicios\\VacacionesServicio.cs",
+              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\VacacionesServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicios\\VacacionesServicio.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAmwHYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:45:15.051Z",
+              "WhenOpened": "2024-10-24T13:58:46.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EmpresaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\EmpresaDTO.cs",
-              "RelativeDocumentMoniker": "CORE\\DTO\\EmpresaDTO.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\EmpresaDTO.cs",
-              "RelativeToolTip": "CORE\\DTO\\EmpresaDTO.cs",
+              "Title": "LLegadaTardeServicio.cs",
+              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\LLegadaTardeServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicios\\LLegadaTardeServicio.cs",
+              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\LLegadaTardeServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicios\\LLegadaTardeServicio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:45:13.622Z",
+              "WhenOpened": "2024-10-24T13:58:25.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EmpleadoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\EmpleadoDTO.cs",
-              "RelativeDocumentMoniker": "CORE\\DTO\\EmpleadoDTO.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\EmpleadoDTO.cs",
-              "RelativeToolTip": "CORE\\DTO\\EmpleadoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "EmpresaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpresaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicios\\EmpresaServicio.cs",
+              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpresaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicios\\EmpresaServicio.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:45:11.824Z",
+              "WhenOpened": "2024-10-24T13:58:20.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AsistenciaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
-              "RelativeDocumentMoniker": "CORE\\DTO\\AsistenciaDTO.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
-              "RelativeToolTip": "CORE\\DTO\\AsistenciaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "EmpleadoServicio.cs",
+              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpleadoServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicios\\EmpleadoServicio.cs",
+              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpleadoServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicios\\EmpleadoServicio.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:45:09.864Z",
+              "WhenOpened": "2024-10-24T13:58:12.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BdRrhhContext.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Contexto\\BdRrhhContext.cs",
-              "RelativeDocumentMoniker": "DataBase\\Contexto\\BdRrhhContext.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Contexto\\BdRrhhContext.cs",
-              "RelativeToolTip": "DataBase\\Contexto\\BdRrhhContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Title": "AsistenciaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\AsistenciaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicios\\AsistenciaServicio.cs",
+              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\AsistenciaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicios\\AsistenciaServicio.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAEwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:44:56.479Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Vacaciones.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Models\\Vacaciones.cs",
-              "RelativeDocumentMoniker": "DataBase\\Models\\Vacaciones.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Models\\Vacaciones.cs",
-              "RelativeToolTip": "DataBase\\Models\\Vacaciones.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:44:50.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Models\\Empleado.cs",
-              "RelativeDocumentMoniker": "DataBase\\Models\\Empleado.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Models\\Empleado.cs",
-              "RelativeToolTip": "DataBase\\Models\\Empleado.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:44:46.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Asistencia.cs",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Models\\Asistencia.cs",
-              "RelativeDocumentMoniker": "DataBase\\Models\\Asistencia.cs",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\DataBase\\Models\\Asistencia.cs",
-              "RelativeToolTip": "DataBase\\Models\\Asistencia.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:44:39.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Servicios",
-              "DocumentMoniker": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\Servicios\\Servicios.csproj",
-              "RelativeDocumentMoniker": "Servicios\\Servicios.csproj",
-              "ToolTip": "C:\\Users\\FRanco\\Desktop\\tp-desarrollo\\backend\\Servicios\\Servicios.csproj",
-              "RelativeToolTip": "Servicios\\Servicios.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-24T14:44:30.667Z",
+              "WhenOpened": "2024-10-24T13:54:38.439Z",
               "EditorCaption": ""
             }
           ]

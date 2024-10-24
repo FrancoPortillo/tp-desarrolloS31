@@ -10,11 +10,11 @@ namespace CORE.DTO
     {
         public required DateTime FechaInicio { get; set; }
 
-        public required DateTime FechaFin{ get; set; }
+        public required DateTime FechaFin { get; set; }
 
         public required Boolean Aprobado { get; set; }
 
-        public required int IdEmpleado  { get; set; }
+        public required int IdEmpleado { get; set; }
 
     }
 
@@ -25,5 +25,6 @@ namespace CORE.DTO
         public int Id { get; set; }
     }
 }
+//hola
 
 
