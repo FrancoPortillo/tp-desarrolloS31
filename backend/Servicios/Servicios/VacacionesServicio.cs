@@ -70,7 +70,7 @@ namespace Servicios.Servicios
 
             VacacionesModelo.FechaInicio = Vacaciones.FechaInicio;
             VacacionesModelo.FechaFin = Vacaciones.FechaFin;
-            VacacionesModelo.Apobado = Vacaciones.Aprobado;
+            VacacionesModelo.Aprobado = Vacaciones.Aprobado;
             
             
 
