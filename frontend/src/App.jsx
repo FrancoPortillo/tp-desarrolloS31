@@ -1,6 +1,5 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { MenuPrincipal } from "./componentes/MenuPrincipal";
-import { NavBar } from "./componentes/NavBar";
 import { Auth0Wrapper } from "./componentes/Auth0Wrapper";
 import { Empleados } from "./componentes/Empleados";
 import { Perfil } from "./componentes/Perfil";
