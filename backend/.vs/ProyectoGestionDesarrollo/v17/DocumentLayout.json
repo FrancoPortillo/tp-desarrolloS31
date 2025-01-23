@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "CORE\\DTO\\VacacionesDTO.cs",
               "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\CORE\\DTO\\VacacionesDTO.cs",
               "RelativeToolTip": "CORE\\DTO\\VacacionesDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T14:45:50.559Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Servicios\\Servicios\\VacacionesServicio.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAmwHYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:46.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:58:46.863Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "Servicios\\Servicios\\LLegadaTardeServicio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:25.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:58:25.295Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Servicios\\Servicios\\EmpresaServicio.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:20.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:58:20.22Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Servicios\\Servicios\\EmpleadoServicio.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:12.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:58:12.045Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "Servicios\\Servicios\\AsistenciaServicio.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAAEwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:54:38.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:54:38.439Z"
             }
           ]
         }
