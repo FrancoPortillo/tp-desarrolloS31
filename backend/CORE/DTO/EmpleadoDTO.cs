@@ -24,7 +24,6 @@ namespace CORE.DTO
         public required string Rol { get; set; }
 
         public  required int Legajo { get; set; }
-
     }
     public class EmpleadoDTOConId : EmpleadoDTO
     {
