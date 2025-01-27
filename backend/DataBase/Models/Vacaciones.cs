@@ -14,9 +14,9 @@ namespace Data.Models
 
         public required DateTime FechaFin { get; set; }
 
-        public required Boolean aprobado { get; set; }
+        public required Boolean Aprobado { get; set; }
 
-        public required string Idempleado { get; set; }
+        public required int IdEmpleado { get; set; }
 
         public virtual Empleado Empleado { get; set; }  //fk
     }

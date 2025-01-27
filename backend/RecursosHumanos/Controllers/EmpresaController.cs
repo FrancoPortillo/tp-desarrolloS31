@@ -1,115 +1,144 @@
 ﻿using Mapster;
-using Core;
 using Core.DTO;
 using Servicios;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Servicios.Validadores;
+using Servicios.Servicios;
 
-namespace WebAPI.Controllers
+namespace RecursosHumanos.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class EmpresaController : ControllerBase
     {
         private readonly IEmpresa _empresa;
+        private readonly ILogger<EmpresaController> _logger;
 
-        public EmpresaController(IEmpresa Empresa)
+        public EmpresaController(IEmpresa empresa, ILogger<EmpresaController> logger)
         {
-            _empresa = Empresa;
+            _empresa = empresa;
+            _logger = logger;
         }
 
         [HttpPost("Agregar")]
-        public async Task<ActionResult<string>> Agregar(EmpresaDTO Empresa)
+        public async Task<ActionResult<string>> Agregar(EmpresaDTO empresa)
         {
-            Log.Information("Intentando agregar una nueva Empresa: {@Empresa}", Empresa);
+            _logger.LogInformation("Intentando agregar una nueva Empresa: {@Empresa}", empresa);
 
             var validador = new EmpresaAgregarValidador();
-            var validadorResultado = validador.Validate(Empresa);
+            var validadorResultado = validador.Validate(empresa);
 
             if (!validadorResultado.IsValid)
             {
                 return BadRequest(validadorResultado.Errors);
             }
 
-            var nuevoId = await _empresa.Agregar(Empresa).ConfigureAwait(false);
-            if (nuevoId > 0)
+            try
             {
-                return Ok($"Empresa creada con éxito");
-                Log.Information("Empresa agregada con éxito, ID: {NuevoId}", nuevoId);
-            }
+                var nuevoId = await _empresa.Agregar(empresa).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    _logger.LogInformation("Empresa agregada con éxito, ID: {NuevoId}", nuevoId);
+                    return Ok("Empresa creada con éxito");
+                }
 
-            Log.Warning("Error al crear la Empresa.");
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear la Empresa.");
+                _logger.LogWarning("Error al crear la Empresa.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear la Empresa.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al agregar la Empresa.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
 
         [HttpPut("Modificar")]
-        public async Task<ActionResult<string>> Modificar(DTOConId Empresa)
+        public async Task<ActionResult<string>> Modificar(EmpresaDTOConId empresa)
         {
             var validador = new EmpresaModificarValidador();
-            var validadorResultado = validador.Validate(Empresa);
+            var validadorResultado = validador.Validate(empresa);
 
             if (!validadorResultado.IsValid)
             {
                 return BadRequest(validadorResultado.Errors);
             }
 
-            var nuevoId = await _empresa.Modificar(Empresa).ConfigureAwait(false);
-
-            if (nuevoId > 0)
+            try
             {
-                return Ok($"Empresa modificada con éxito, ID: {nuevoId}");
+                var nuevoId = await _empresa.Modificar(empresa).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    return Ok($"Empresa modificada con éxito, ID: {nuevoId}");
+                }
+
+                return NotFound("No se encontró la Empresa para modificar.");
             }
-
-            return NotFound("No se encontró la Empresa para modificar.");
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al modificar la Empresa.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
-
-
-
 
         [HttpDelete("Eliminar/{id}")]
         public async Task<ActionResult> Eliminar(int id)
         {
-            var resultado = await _empresa.Eliminar(id).ConfigureAwait(false);
-            if (resultado)
+            try
             {
-                return Ok("Empresa eliminada con éxito.");
-            }
-            else
-            {
+                var resultado = await _empresa.Eliminar(id).ConfigureAwait(false);
+                if (resultado)
+                {
+                    return Ok("Empresa eliminada con éxito.");
+                }
                 return NotFound("No se encontró la Empresa.");
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al eliminar la Empresa.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
+
         [HttpGet("Obtener")]
         public async Task<ActionResult<List<EmpresaDTOConId>>> Obtener()
         {
-            Log.Information("Iniciando el proceso de obtener tareas.");
+            _logger.LogInformation("Iniciando el proceso de obtener empresas.");
 
-            var empresa = await _empresa.Obtener().ConfigureAwait(false);
-
-            if (empresa != null && empresa.Count > 0)
+            try
             {
-                Log.Information("Se obtuvieron {Count} tareas correctamente.", empresa.Count);
-                return Ok(empresa);
-            }
-            else
-            {
-                Log.Warning("No se encontraron empresas.");
+                var empresas = await _empresa.Obtener().ConfigureAwait(false);
+                if (empresas != null && empresas.Count > 0)
+                {
+                    _logger.LogInformation("Se obtuvieron {Count} empresas correctamente.", empresas.Count);
+                    return Ok(empresas);
+                }
+                _logger.LogWarning("No se encontraron empresas.");
                 return NotFound("No se encontraron empresas.");
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener las empresas.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
-
 
         [HttpGet("ObtenerIndividual/{id}")]
         public async Task<ActionResult<EmpresaDTOConId>> ObtenerIndividual(int id)
         {
-            var Empresa = await _empresa.ObtenerIndividual(id).ConfigureAwait(false);
-            if (Empresa != null)
+            try
             {
-                return Ok(Empresa);
-            }
-            else
-            {
+                var empresa = await _empresa.ObtenerIndividual(id).ConfigureAwait(false);
+                if (empresa != null)
+                {
+                    return Ok(empresa);
+                }
                 return NotFound("No se encontró la Empresa.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener la Empresa.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
     }

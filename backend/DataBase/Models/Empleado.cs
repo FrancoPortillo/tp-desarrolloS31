@@ -9,7 +9,7 @@ namespace Data.Models
     public partial class Empleado
     {
 
-        public int Id { get; set; } //PK ¿¿Como las referenciamos?????
+        public int Id { get; set; } 
         public required string Nombre { get; set; }
 
         public required string Apellido{ get; set; }
@@ -23,6 +23,8 @@ namespace Data.Models
         public required string Email { get; set; }
 
         public required string Puesto { get; set; }
+
+        public required string Rol { get; set; }
 
         public required string IdEmpresa { get; set; }
 

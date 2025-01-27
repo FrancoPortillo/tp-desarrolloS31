@@ -122,16 +122,6 @@ export const App = () => {
         <Route path="/solicitudes" element={<Solicitudes />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
-      {isLoading && <p>Cargando...</p>}
-      {!isLoading && !user && (
-        <button onClick={() => loginWithRedirect()}>Ingresar</button>
-      )}
-      {!isLoading && user && (
-        <div>
-          <p>Usuario autenticado: {user.name}</p>
-          <button onClick={() => logout({ returnTo: window.location.origin })}>Salir</button>
-        </div>
-      )}
     </Auth0Wrapper>
   );
 };

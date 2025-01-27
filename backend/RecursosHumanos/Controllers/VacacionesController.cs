@@ -1,117 +1,143 @@
 ﻿using Mapster;
-using Core;
-using Core.DTO;
-using Servicios;
-using Microsoft.AspNetCore.Mvc;
-using Servicios.Validadores;
-using CORE.DTO.Core.DTO;
 using CORE.DTO;
+using Servicios.Servicios;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Servicios.Validadores;
 
-namespace WebAPI.Controllers
+namespace RecursosHumanos.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class Controller : ControllerBase
+    public class VacacionesController : ControllerBase
     {
-        private readonly IVacaciones _Vacaciones;
+        private readonly IVacaciones _vacaciones;
+        private readonly ILogger<VacacionesController> _logger;
 
-        public VacacionesController(IVacaciones Vacaciones)
+        public VacacionesController(IVacaciones vacaciones, ILogger<VacacionesController> logger)
         {
-            _Vacaciones = Vacaciones;
+            _vacaciones = vacaciones;
+            _logger = logger;
         }
 
         [HttpPost("Agregar")]
-        public async Task<ActionResult<string>> Agregar(VacacionesDTO Vacaciones)
+        public async Task<ActionResult<string>> Agregar(VacacionesDTO vacaciones)
         {
-            Log.Information("Intentando agregar una nueva Vacaciones: {@Vacaciones}", Vacaciones);
+            _logger.LogInformation("Intentando agregar una nueva Vacaciones: {@Vacaciones}", vacaciones);
 
             var validador = new VacacionesAgregarValidador();
-            var validadorResultado = validador.Validate(Vacaciones);
+            var validadorResultado = validador.Validate(vacaciones);
 
             if (!validadorResultado.IsValid)
             {
                 return BadRequest(validadorResultado.Errors);
             }
 
-            var nuevoId = await _Vacaciones.Agregar(Vacaciones).ConfigureAwait(false);
-            if (nuevoId > 0)
+            try
             {
-                return Ok($"Vacaciones creada con éxito");
-                Log.Information("Vacaciones agregada con éxito, ID: {NuevoId}", nuevoId);
-            }
+                var nuevoId = await _vacaciones.Agregar(vacaciones).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    _logger.LogInformation("Vacaciones agregada con éxito, ID: {NuevoId}", nuevoId);
+                    return Ok("Vacaciones creada con éxito");
+                }
 
-            Log.Warning("Error al crear la Vacaciones.");
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear la Vacaciones.");
+                _logger.LogWarning("Error al crear la Vacaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear la Vacaciones.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al agregar la Vacaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
 
         [HttpPut("Modificar")]
-        public async Task<ActionResult<string>> Modificar(DTOConId Vacaciones)
+        public async Task<ActionResult<string>> Modificar(VacacionesDTOConId vacaciones)
         {
             var validador = new VacacionesModificarValidador();
-            var validadorResultado = validador.Validate(Vacaciones);
+            var validadorResultado = validador.Validate(vacaciones);
 
             if (!validadorResultado.IsValid)
             {
                 return BadRequest(validadorResultado.Errors);
             }
 
-            var nuevoId = await _Vacaciones.Modificar(Vacaciones).ConfigureAwait(false);
-
-            if (nuevoId > 0)
+            try
             {
-                return Ok($"Vacaciones modificada con éxito, ID: {nuevoId}");
+                var nuevoId = await _vacaciones.Modificar(vacaciones).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    return Ok($"Vacaciones modificada con éxito, ID: {nuevoId}");
+                }
+
+                return NotFound("No se encontró la Vacaciones para modificar.");
             }
-
-            return NotFound("No se encontró la Vacaciones para modificar.");
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al modificar la Vacaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
-
-
-
 
         [HttpDelete("Eliminar/{id}")]
         public async Task<ActionResult> Eliminar(int id)
         {
-            var resultado = await _Vacaciones.Eliminar(id).ConfigureAwait(false);
-            if (resultado)
+            try
             {
-                return Ok("Vacaciones eliminada con éxito.");
-            }
-            else
-            {
+                var resultado = await _vacaciones.Eliminar(id).ConfigureAwait(false);
+                if (resultado)
+                {
+                    return Ok("Vacaciones eliminada con éxito.");
+                }
                 return NotFound("No se encontró la Vacaciones.");
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al eliminar la Vacaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
+
         [HttpGet("Obtener")]
         public async Task<ActionResult<List<VacacionesDTOConId>>> Obtener()
         {
-            Log.Information("Iniciando el proceso de obtener tareas.");
+            _logger.LogInformation("Iniciando el proceso de obtener vacaciones.");
 
-            var Vacaciones = await _Vacaciones.Obtener().ConfigureAwait(false);
-
-            if (Vacaciones != null && Vacaciones.Count > 0)
+            try
             {
-                Log.Information("Se obtuvieron {Count} tareas correctamente.", Vacaciones.Count);
-                return Ok(Vacaciones);
+                var vacaciones = await _vacaciones.Obtener().ConfigureAwait(false);
+                if (vacaciones != null && vacaciones.Count > 0)
+                {
+                    _logger.LogInformation("Se obtuvieron {Count} vacaciones correctamente.", vacaciones.Count);
+                    return Ok(vacaciones);
+                }
+                _logger.LogWarning("No se encontraron vacaciones.");
+                return NotFound("No se encontraron vacaciones.");
             }
-            else
+            catch (Exception ex)
             {
-                Log.Warning("No se encontraron Vacaciones.");
-                return NotFound("No se encontraron Vacaciones.");
+                _logger.LogError(ex, "Error al obtener las vacaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
 
-
         [HttpGet("ObtenerIndividual/{id}")]
-        public async Task<ActionResult<EmpresaDTOConId>> ObtenerIndividual(int id)
+        public async Task<ActionResult<VacacionesDTOConId>> ObtenerIndividual(int id)
         {
-            var Vacaciones = await _Vacaciones.ObtenerIndividual(id).ConfigureAwait(false);
-            if (Vacaciones != null)
+            try
             {
-                return Ok(Vacaciones);
-            }
-            else
-            {
+                var vacaciones = await _vacaciones.ObtenerIndividual(id).ConfigureAwait(false);
+                if (vacaciones != null)
+                {
+                    return Ok(vacaciones);
+                }
                 return NotFound("No se encontró la Vacaciones.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener la Vacaciones.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
     }

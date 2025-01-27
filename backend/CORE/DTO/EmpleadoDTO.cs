@@ -12,12 +12,18 @@ namespace CORE.DTO
 
         public required string Apellido { get; set; }
 
-        public required string telefono {  get; set; }
+        public required string Telefono {  get; set; }
 
-        public required int edad { get; set; }
-        public required string email { get; set; }
+        public required string Dni { get; set; }
 
-        public required string puesto  { get; set; }
+        public required int Edad { get; set; }
+        public required string Email { get; set; }
+
+        public required string Puesto  { get; set; }
+
+        public required string Rol { get; set; }
+
+        public  required int Legajo { get; set; }
 
     }
 
@@ -26,7 +32,8 @@ namespace CORE.DTO
     public class EmpleadoDTOConId : EmpleadoDTO
     {
         public int Id { get; set; }
-        public int legajo { get; set; }
+
+        public int IdEmpresa { get; set; }
     }
 }
 

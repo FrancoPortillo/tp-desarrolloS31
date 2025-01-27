@@ -1,19 +1,18 @@
-﻿using Core.DTO;
+﻿using CORE.DTO;
 using Data.Contexto;
 using Data;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Servicios.Validadores;
-using CORE.DTO;
 using FluentValidation;
 
 namespace Servicios.Servicios
 {
     public interface IEmpleado
     {
-        Task<int> Agregar(EmpleadoDTO Empleado);
+        Task<int> Agregar(EmpleadoDTO empleado);
         Task<bool> Eliminar(int id);
-        Task<int> Modificar(EmpleadoDTOConId Empleado);
+        Task<int> Modificar(EmpleadoDTOConId empleado);
         Task<EmpleadoDTOConId> ObtenerIndividual(int id);
         Task<List<EmpleadoDTOConId>> Obtener();
     }
@@ -27,45 +26,48 @@ namespace Servicios.Servicios
             _db = db;
         }
 
-        public async Task<int> Agregar(EmpleadoDTO Empleado)
+        public async Task<int> Agregar(EmpleadoDTO empleado)
         {
             var validador = new EmpleadoAgregarValidador();
-            var validadorResultado = validador.Validate(Empleado);
+            var validadorResultado = validador.Validate(empleado);
 
             if (!validadorResultado.IsValid)
             {
-                throw new Exception("Validación fallida");
+                throw new ValidationException(validadorResultado.Errors);
             }
 
-            var nuevoEmpleado = Empleado.Adapt<Data.Models.Empleado>();
+            var nuevoEmpleado = empleado.Adapt<Data.Models.Empleado>();
             await _db.Empleado.AddAsync(nuevoEmpleado).ConfigureAwait(false);
             await _db.SaveChangesAsync().ConfigureAwait(false);
             return nuevoEmpleado.Id;
         }
 
-        public async Task<int> Modificar(EmpleadoDTOConId Empleado)
+        public async Task<int> Modificar(EmpleadoDTOConId empleado)
         {
             var validador = new EmpleadoModificarValidador();
-            var validadorResultado = validador.Validate(Empleado);
+            var validadorResultado = validador.Validate(empleado);
 
             if (!validadorResultado.IsValid)
             {
-                throw new Exception("Validación fallida");
+                throw new ValidationException(validadorResultado.Errors);
             }
 
-            var empleadoModelo = await _db.Empleado.FirstOrDefaultAsync(x => x.Id == Empleado.Id).ConfigureAwait(false);
+            var empleadoModelo = await _db.Empleado.FirstOrDefaultAsync(x => x.Id == empleado.Id).ConfigureAwait(false);
 
             if (empleadoModelo == null)
             {
-                throw new Exception("Empleado no encontrado");
+                throw new KeyNotFoundException("Empleado no encontrado");
             }
 
-            empleadoModelo.Nombre = Empleado.Nombre;
-            empleadoModelo.Apellido = Empleado.Apellido;
-            empleadoModelo.Legajo = Empleado.legajo;
-            empleadoModelo.Email = Empleado.email;
-            empleadoModelo.Edad = Empleado.edad;
-            empleadoModelo.Puesto = Empleado.puesto;
+            empleadoModelo.Nombre = empleado.Nombre;
+            empleadoModelo.Apellido = empleado.Apellido;
+            empleadoModelo.Legajo = empleado.Legajo;
+            empleadoModelo.Email = empleado.Email;
+            empleadoModelo.Edad = empleado.Edad;
+            empleadoModelo.Puesto = empleado.Puesto;
+            empleadoModelo.Rol = empleado.Rol;
+            empleadoModelo.Dni = empleado.Dni;
+            empleadoModelo.IdEmpresa = empleado.IdEmpresa.ToString();
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 
@@ -83,7 +85,7 @@ namespace Servicios.Servicios
                 return true;
             }
 
-            throw new Exception("Empleado no encontrado");
+            throw new KeyNotFoundException("Empleado no encontrado");
         }
 
         public async Task<List<EmpleadoDTOConId>> Obtener()
@@ -101,8 +103,7 @@ namespace Servicios.Servicios
                 return empleadoModelo.Adapt<EmpleadoDTOConId>();
             }
 
-            throw new Exception("Empleado no encontrado");
+            throw new KeyNotFoundException("Empleado no encontrado");
         }
     }
 }
-
