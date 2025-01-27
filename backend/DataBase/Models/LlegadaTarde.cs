@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public partial class LLegadaTarde
+    [Table("LLegadaTarde")]
+    public class LLegadaTarde
     {
-
-        public int Id { get; set; } //PK ¿¿Como las referenciamos?????
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]//Autoincremental
+        public int Id { get; set; }
+        [Required]
         public required DateTime Fecha { get; set; }
-
+        [Required]
+        public required string Motivo { get; set; }
+        [Required]
         public required int MinutosTarde{ get; set; }
-
-        public required string Idempleado { get; set; }
-
-        public required int IdEmpleado { get; set; }
-
+        [ForeignKey("IdEmpleado")]
+        public required Empleado Empleado { get; set; }
     }
 }

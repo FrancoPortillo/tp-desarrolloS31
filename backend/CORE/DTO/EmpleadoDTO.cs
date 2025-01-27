@@ -26,9 +26,6 @@ namespace CORE.DTO
         public  required int Legajo { get; set; }
 
     }
-
-   
-
     public class EmpleadoDTOConId : EmpleadoDTO
     {
         public int Id { get; set; }

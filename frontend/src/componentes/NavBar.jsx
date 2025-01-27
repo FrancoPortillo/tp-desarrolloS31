@@ -8,8 +8,9 @@ import { useAuth0 } from '@auth0/auth0-react';
 export const NavBar = () => {
   const { loginWithRedirect, logout, user, isLoading } = useAuth0();
 
-  console.log('isLoading:', isLoading);
+  console.log("NavBar");
   console.log('user:', user);
+
 
   return (
     <AppBar position="static" color="default">
