@@ -12,6 +12,7 @@
           "FluentValidation.AspNetCore": "11.3.0",
           "Mapster": "7.4.0",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.1",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.3",
           "Servicios": "1.0.0",
           "Swashbuckle.AspNetCore": "7.2.0"
         },
