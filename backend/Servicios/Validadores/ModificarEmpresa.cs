@@ -18,9 +18,7 @@ public class EmpresaModificarValidador : AbstractValidator<EmpresaDTOConId>
         RuleFor(e => e.Telefono)
             .NotEmpty().WithMessage("El telefono es obligatorio.")
                 .MaximumLength(250).WithMessage("El telefono no debe tener más de 250 caracteres.");
-
-
-
+                
         RuleFor(e => e.Email)
             .NotEmpty().WithMessage("El email es obligatorio.")
                 .MaximumLength(250).WithMessage("El email no debe tener más de 250 caracteres.");

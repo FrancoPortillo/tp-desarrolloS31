@@ -15,7 +15,7 @@ export const Auth0Wrapper = ({ children }) => {
   if (!(domain && clientId && redirectUri)) {
     return null;
   }
-
+  
   return (
     <Auth0Provider
       domain={domain}

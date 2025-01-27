@@ -1,117 +1,143 @@
 ﻿using Mapster;
-using Core;
-using Core.DTO;
-using Servicios;
+using Servicios.Servicios;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Servicios.Validadores;
-using CORE.DTO.Core.DTO;
 using CORE.DTO;
 
-namespace WebAPI.Controllers
+namespace RecursosHumanos.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class Controller : ControllerBase
+    public class LlegadaTardeController : ControllerBase
     {
-        private readonly ILLegadaTarde _LLegadaTarde;
+        private readonly ILlegadaTarde _llegadaTarde;
+        private readonly ILogger<LlegadaTardeController> _logger;
 
-        public LLegadaTardeController(ILLegadaTarde LLegadaTarde)
+        public LlegadaTardeController(ILlegadaTarde llegadaTarde, ILogger<LlegadaTardeController> logger)
         {
-            _LLegadaTarde = LLegadaTarde;
+            _llegadaTarde = llegadaTarde;
+            _logger = logger;
         }
 
         [HttpPost("Agregar")]
-        public async Task<ActionResult<string>> Agregar(LLegadaTardeDTO LLegadaTarde)
+        public async Task<ActionResult<string>> Agregar(LLegadaTardeDTO llegadaTarde)
         {
-            Log.Information("Intentando agregar una nueva LLegadaTarde: {@LLegadaTarde}", LLegadaTarde);
+            _logger.LogInformation("Intentando agregar una nueva LlegadaTarde: {@LlegadaTarde}", llegadaTarde);
 
             var validador = new LLegadaTardeAgregarValidador();
-            var validadorResultado = validador.Validate(LLegadaTarde);
+            var validadorResultado = validador.Validate(llegadaTarde);
 
             if (!validadorResultado.IsValid)
             {
                 return BadRequest(validadorResultado.Errors);
             }
 
-            var nuevoId = await _LLegadaTarde.Agregar(LLegadaTarde).ConfigureAwait(false);
-            if (nuevoId > 0)
+            try
             {
-                return Ok($"LLegadaTarde creada con éxito");
-                Log.Information("LLegadaTarde agregada con éxito, ID: {NuevoId}", nuevoId);
-            }
+                var nuevoId = await _llegadaTarde.Agregar(llegadaTarde).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    _logger.LogInformation("LlegadaTarde agregada con éxito, ID: {NuevoId}", nuevoId);
+                    return Ok("LlegadaTarde creada con éxito");
+                }
 
-            Log.Warning("Error al crear la LLegadaTarde.");
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear la LLegadaTarde.");
+                _logger.LogWarning("Error al crear la LlegadaTarde.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear la LlegadaTarde.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al agregar la LlegadaTarde.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
 
         [HttpPut("Modificar")]
-        public async Task<ActionResult<string>> Modificar(LLegadaTardeDTOConId LLegadaTarde)
+        public async Task<ActionResult<string>> Modificar(LLegadaTardeDTOConId llegadaTarde)
         {
             var validador = new LLegadaTardeModificarValidador();
-            var validadorResultado = validador.Validate(LLegadaTarde);
+            var validadorResultado = validador.Validate(llegadaTarde);
 
             if (!validadorResultado.IsValid)
             {
                 return BadRequest(validadorResultado.Errors);
             }
 
-            var nuevoId = await _LLegadaTarde.Modificar(LLegadaTarde).ConfigureAwait(false);
-
-            if (nuevoId > 0)
+            try
             {
-                return Ok($"LLegadaTarde modificada con éxito, ID: {nuevoId}");
+                var nuevoId = await _llegadaTarde.Modificar(llegadaTarde).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    return Ok($"LlegadaTarde modificada con éxito, ID: {nuevoId}");
+                }
+
+                return NotFound("No se encontró la LlegadaTarde para modificar.");
             }
-
-            return NotFound("No se encontró la LLegadaTarde para modificar.");
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al modificar la LlegadaTarde.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
         }
-
-
-
 
         [HttpDelete("Eliminar/{id}")]
         public async Task<ActionResult> Eliminar(int id)
         {
-            var resultado = await _LLegadaTarde.Eliminar(id).ConfigureAwait(false);
-            if (resultado)
+            try
             {
-                return Ok("LLegadaTarde eliminada con éxito.");
+                var resultado = await _llegadaTarde.Eliminar(id).ConfigureAwait(false);
+                if (resultado)
+                {
+                    return Ok("LlegadaTarde eliminada con éxito.");
+                }
+                return NotFound("No se encontró la LlegadaTarde.");
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound("No se encontró la LLegadaTarde.");
+                _logger.LogError(ex, "Error al eliminar la LlegadaTarde.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
+
         [HttpGet("Obtener")]
         public async Task<ActionResult<List<LLegadaTardeDTOConId>>> Obtener()
         {
-            Log.Information("Iniciando el proceso de obtener tareas.");
+            _logger.LogInformation("Iniciando el proceso de obtener llegadas tarde.");
 
-            var LLegadaTarde = await _LLegadaTarde.Obtener().ConfigureAwait(false);
-
-            if (LLegadaTarde != null && LLegadaTarde.Count > 0)
+            try
             {
-                Log.Information("Se obtuvieron {Count} tareas correctamente.", LLegadaTarde.Count);
-                return Ok(LLegadaTarde);
+                var llegadasTarde = await _llegadaTarde.Obtener().ConfigureAwait(false);
+                if (llegadasTarde != null && llegadasTarde.Count > 0)
+                {
+                    _logger.LogInformation("Se obtuvieron {Count} llegadas tarde correctamente.", llegadasTarde.Count);
+                    return Ok(llegadasTarde);
+                }
+                _logger.LogWarning("No se encontraron llegadas tarde.");
+                return NotFound("No se encontraron llegadas tarde.");
             }
-            else
+            catch (Exception ex)
             {
-                Log.Warning("No se encontraron LLegadaTarde.");
-                return NotFound("No se encontraron LLegadaTarde.");
+                _logger.LogError(ex, "Error al obtener las llegadas tarde.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
 
-
         [HttpGet("ObtenerIndividual/{id}")]
-        public async Task<ActionResult<EmpresaDTOConId>> ObtenerIndividual(int id)
+        public async Task<ActionResult<LLegadaTardeDTOConId>> ObtenerIndividual(int id)
         {
-            var LLegadaTarde = await _LLegadaTarde.ObtenerIndividual(id).ConfigureAwait(false);
-            if (LLegadaTarde != null)
+            try
             {
-                return Ok(LLegadaTarde);
+                var llegadaTarde = await _llegadaTarde.ObtenerIndividual(id).ConfigureAwait(false);
+                if (llegadaTarde != null)
+                {
+                    return Ok(llegadaTarde);
+                }
+                return NotFound("No se encontró la LlegadaTarde.");
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound("No se encontró la LLegadaTarde.");
+                _logger.LogError(ex, "Error al obtener la LlegadaTarde.");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
     }

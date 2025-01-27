@@ -10,15 +10,13 @@ namespace Data.Models
     {
 
         public int Id { get; set; } //PK ¿¿Como las referenciamos?????
-        public required DateTime fecha { get; set; }
+        public required DateTime Fecha { get; set; }
 
-        public required Timer MinutosTarde{ get; set; }
+        public required int MinutosTarde{ get; set; }
 
         public required string Idempleado { get; set; }
 
-        public virtual Empleado Empleado { get; set; }  //fk
-
-
+        public required int IdEmpleado { get; set; }
 
     }
 }

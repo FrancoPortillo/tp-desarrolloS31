@@ -7,9 +7,21 @@ using FluentValidation;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
 
-// Add services to the container.
+builder.Services.AddCors(options => 
+{
+    options.AddPolicy("AllowFrontEnd", builder => 
+    {
+        builder.WithOrigins("http://localhost:5173")
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
 
+app.UseCors("AllowFrontEnd");
+
+// Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddScoped<IEmpresa,EmpresaServicio>();
 builder.Services.AddScoped<IEmpresa, EmpleadoServicio>();
@@ -19,8 +31,6 @@ builder.Services.AddScoped<IEmpresa, AsistenciaServicio>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
 
 // Registrar los validadores
 builder.Services.AddFluentValidationAutoValidation()

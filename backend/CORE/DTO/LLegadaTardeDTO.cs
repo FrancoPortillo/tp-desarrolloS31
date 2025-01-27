@@ -10,9 +10,9 @@ namespace CORE.DTO
     {
         public required DateTime Fecha { get; set; }
 
-        public required Timer Minutostarde{ get; set; }
+        public required int MinutosTarde{ get; set; }
 
-        public required int Idempleado { get; set; }
+        public required int IdEmpleado { get; set; }
 
     }
 

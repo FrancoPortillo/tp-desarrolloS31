@@ -1,26 +1,19 @@
 ﻿using FluentValidation;
-using Core.DTO;
+using CORE.DTO;
 
-namespace Servicios.Validadores;
-
-public class LLegadaTardeModificarValidador : AbstractValidator<LlegadaTardeDTOConId>
+namespace Servicios.Validadores
 {
-    public LLegadaTardeModificarValidador()
+    public class LLegadaTardeModificarValidador : AbstractValidator<LLegadaTardeDTOConId>
     {
-        RuleFor(lg => lg.Fecha)
-           .NotEmpty().WithMessage("La fecha es obligatoria.")
-           .Must(fecha => fecha != default(DateTime)).WithMessage("La fecha es inválida.");
+        public LLegadaTardeModificarValidador()
+        {
+            RuleFor(lg => lg.Fecha)
+                .NotEmpty().WithMessage("La fecha es obligatoria.")
+                .Must(fecha => fecha != default(DateTime)).WithMessage("La fecha es inválida.");
 
-
-        RuleFor(lg => lg.MinutosTarde)
-            .NotEmpty().WithMessage("La fecha es obligatoria.")
-            .LessThanOrEqualTo(120).WithMessage("Los minutos tarde no pueden ser más de 60.");
-        ;
-
-
+            RuleFor(lg => lg.MinutosTarde)
+                .GreaterThan(0).WithMessage("Los minutos tarde deben ser mayores a 0.")
+                .LessThanOrEqualTo(120).WithMessage("Los minutos tarde no pueden ser más de 120.");
+        }
     }
-
-
-
-}
 }
