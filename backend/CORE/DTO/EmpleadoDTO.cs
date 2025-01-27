@@ -29,7 +29,6 @@ namespace CORE.DTO
     public class EmpleadoDTOConId : EmpleadoDTO
     {
         public int Id { get; set; }
-
         public int IdEmpresa { get; set; }
     }
 }

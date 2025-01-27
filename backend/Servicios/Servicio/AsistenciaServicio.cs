@@ -65,6 +65,7 @@ namespace Servicios.Servicios
 
             asistenciaModelo.Fecha = asistencia.Fecha;
             asistenciaModelo.Presente = asistencia.Presente;
+            asistenciaModelo.Empleado.Id = asistencia.IdEmpleado;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 

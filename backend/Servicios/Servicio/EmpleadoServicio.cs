@@ -4,6 +4,7 @@ using Data;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Servicios.Validadores;
+using Servicios.Servicios;
 using FluentValidation;
 
 namespace Servicios.Servicios
@@ -67,7 +68,7 @@ namespace Servicios.Servicios
             empleadoModelo.Puesto = empleado.Puesto;
             empleadoModelo.Rol = empleado.Rol;
             empleadoModelo.Dni = empleado.Dni;
-            empleadoModelo.IdEmpresa = empleado.IdEmpresa.ToString();
+            empleadoModelo.Empresa.Id = empleado.IdEmpresa;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 

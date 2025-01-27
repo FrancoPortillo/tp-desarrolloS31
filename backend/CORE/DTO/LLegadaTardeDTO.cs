@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CORE.DTO
 {
     public class LLegadaTardeDTO
@@ -12,15 +13,11 @@ namespace CORE.DTO
 
         public required int MinutosTarde{ get; set; }
 
-        public required int IdEmpleado { get; set; }
-
     }
-
-    //Agrego idempleado que es la fk?
-
     public class LLegadaTardeDTOConId : LLegadaTardeDTO
     {
         public int Id { get; set; }
+        public int IdEmpleado { get; set; }
     }
 }
 
