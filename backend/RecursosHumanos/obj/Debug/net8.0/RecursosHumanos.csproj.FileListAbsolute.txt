@@ -51,3 +51,14 @@ C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarroll
 C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.dll
 C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\refint\RecursosHumanos.dll
 C:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.pdb
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.csproj.AssemblyReference.cache
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.AssemblyInfoInputs.cache
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.AssemblyInfo.cs
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.csproj.CoreCompileInputs.cache
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.sourcelink.json
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.dll
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\refint\RecursosHumanos.dll
+C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\RecursosHumanos\obj\Debug\net8.0\RecursosHumanos.pdb

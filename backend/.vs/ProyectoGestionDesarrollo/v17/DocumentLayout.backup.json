@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\",
+  "WorkspaceRootPath": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\core\\dto\\vacacionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\vacacionesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\llegadatardeservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\llegadatardeservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\empresaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\empresaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\empleadoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\empleadoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\ariag\\desktop\\proyectodesarrollogit\\backend\\servicios\\servicios\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicios\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VacacionesDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\CORE\\DTO\\VacacionesDTO.cs",
-              "RelativeDocumentMoniker": "CORE\\DTO\\VacacionesDTO.cs",
-              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\CORE\\DTO\\VacacionesDTO.cs",
-              "RelativeToolTip": "CORE\\DTO\\VacacionesDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T14:45:50.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "VacacionesServicio.cs",
-              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\VacacionesServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicios\\VacacionesServicio.cs",
-              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\VacacionesServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicios\\VacacionesServicio.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAmwHYAAAABAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\VacacionesServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\VacacionesServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\VacacionesServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\VacacionesServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:46.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LLegadaTardeServicio.cs",
-              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\LLegadaTardeServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicios\\LLegadaTardeServicio.cs",
-              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\LLegadaTardeServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicios\\LLegadaTardeServicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:25.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmpresaServicio.cs",
-              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpresaServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicios\\EmpresaServicio.cs",
-              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpresaServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicios\\EmpresaServicio.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:20.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmpleadoServicio.cs",
-              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpleadoServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicios\\EmpleadoServicio.cs",
-              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\EmpleadoServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicios\\EmpleadoServicio.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:58:12.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AsistenciaServicio.cs",
-              "DocumentMoniker": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\AsistenciaServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicios\\AsistenciaServicio.cs",
-              "ToolTip": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\Servicios\\Servicios\\AsistenciaServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicios\\AsistenciaServicio.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAEwAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:54:38.439Z",
+              "WhenOpened": "2025-01-27T18:49:21Z",
               "EditorCaption": ""
             }
           ]

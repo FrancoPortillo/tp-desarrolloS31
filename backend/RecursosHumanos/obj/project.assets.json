@@ -3463,11 +3463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+      "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
       "projectName": "RecursosHumanos",
-      "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+      "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
       "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\",
+      "outputPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3485,11 +3485,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
-              "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
+            "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
+              "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
             },
-            "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
-              "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj"
+            "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
+              "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj"
             }
           }
         }
@@ -3544,13 +3544,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
