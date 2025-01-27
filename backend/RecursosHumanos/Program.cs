@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontEnd", builder => 
     {
-        builder.WithOrigins("http://localhost:5432")
+        builder.WithOrigins("http://localhost:5173")
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
@@ -39,7 +39,8 @@ builder.Services.AddValidatorsFromAssemblyContaining<AsistenciaAgregarValidador>
 
 // Configurar el contexto de la base de datos
 builder.Services.AddDbContext<BdRrhhContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    b => b.MigrationsAssembly("RecursosHumanos")));
 
 var app = builder.Build();
 

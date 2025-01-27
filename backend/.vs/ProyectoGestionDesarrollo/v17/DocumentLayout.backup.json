@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\vacacionesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\contexto\\bdrrhhcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\contexto\\bdrrhhcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VacacionesServicio.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\VacacionesServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicio\\VacacionesServicio.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\VacacionesServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicio\\VacacionesServicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Program.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Program.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Program.cs",
+              "RelativeToolTip": "RecursosHumanos\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T18:49:21Z",
+              "WhenOpened": "2025-01-27T20:06:38.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BdRrhhContext.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Contexto\\BdRrhhContext.cs",
+              "RelativeDocumentMoniker": "DataBase\\Contexto\\BdRrhhContext.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Contexto\\BdRrhhContext.cs",
+              "RelativeToolTip": "DataBase\\Contexto\\BdRrhhContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T20:00:15.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\appsettings.json",
+              "RelativeDocumentMoniker": "RecursosHumanos\\appsettings.json",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\appsettings.json",
+              "RelativeToolTip": "RecursosHumanos\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-27T19:59:30.656Z",
               "EditorCaption": ""
             }
           ]

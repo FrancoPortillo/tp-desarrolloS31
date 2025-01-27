@@ -22,13 +22,5 @@ namespace Data.Contexto
         public virtual DbSet<Asistencia> Asistencia { get; set; }
         public virtual DbSet<LLegadaTarde> LLegadaTarde { get; set; }
         public virtual DbSet<Vacaciones> Vacaciones { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=worksense;Username=santicanu;Password=7070");
-            }
-        }
     }
 }
