@@ -2,7 +2,7 @@ using Data.Contexto;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Servicios.Validadores;
-using Servicios;
+using Servicios.Servicios;
 using FluentValidation;
 
 
@@ -24,10 +24,10 @@ app.UseCors("AllowFrontEnd");
 // Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddScoped<IEmpresa,EmpresaServicio>();
-builder.Services.AddScoped<IEmpresa, EmpleadoServicio>();
-builder.Services.AddScoped<IEmpresa, VacacionesServicio>();
-builder.Services.AddScoped<IEmpresa, LlegadasTardeServicio>();
-builder.Services.AddScoped<IEmpresa, AsistenciaServicio>();
+builder.Services.AddScoped<IEmpleado, EmpleadoServicio>();
+builder.Services.AddScoped<IVacaciones, VacacionesServicio>();
+builder.Services.AddScoped<ILlegadaTarde, LlegadaTardeServicio>();
+builder.Services.AddScoped<IAsistencia, AsistenciaServicio>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -39,7 +39,7 @@ builder.Services.AddFluentValidationAutoValidation()
 builder.Services.AddValidatorsFromAssemblyContaining<EmpresaAgregarValidador>();
 builder.Services.AddValidatorsFromAssemblyContaining<EmpleadoAgregarValidador>();
 builder.Services.AddValidatorsFromAssemblyContaining<VacacionesAgregarValidador>();
-builder.Services.AddValidatorsFromAssemblyContaining<LlegadasTardeAgregarValidador>();
+builder.Services.AddValidatorsFromAssemblyContaining<LLegadaTardeAgregarValidador>();
 builder.Services.AddValidatorsFromAssemblyContaining<AsistenciaAgregarValidador>();
 
 
