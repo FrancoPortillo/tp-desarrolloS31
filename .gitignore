@@ -1,2 +1,3 @@
 # ignora el archivo vs
 .vs
+**/obj/

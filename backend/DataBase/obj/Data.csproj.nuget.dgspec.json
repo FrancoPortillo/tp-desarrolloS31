@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\DataBase\\Data.csproj": {}
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\DataBase\\Data.csproj": {
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\DataBase\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\DataBase\\Data.csproj",
-        "packagesPath": "C:\\Users\\ariag\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\DataBase\\obj\\",
+        "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj",
+        "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ariag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

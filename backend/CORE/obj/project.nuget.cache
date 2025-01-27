@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sZ7H2CZKEuo=",
+  "dgSpecHash": "5r5kjErmvv8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ariag\\Desktop\\proyectodesarrollogit\\backend\\CORE\\CORE.csproj",
+  "projectFilePath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ariag\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
-    "C:\\Users\\ariag\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512"
+    "C:\\Users\\santi\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512"
   ],
   "logs": []
 }
