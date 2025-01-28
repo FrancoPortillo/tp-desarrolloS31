@@ -15,7 +15,7 @@ namespace Servicios.Servicios
         Task<bool> Eliminar(int id);
         Task<int> Modificar(EmpleadoDTOConId empleado);
         Task<EmpleadoDTOConId> ObtenerIndividual(int id);
-        Task<EmpleadoDTO> ObtenerPorEmail(string email);
+        Task<EmpleadoDTOConId> ObtenerPorEmail(string email);
         Task<List<EmpleadoDTOConId>> Obtener();
     }
 
@@ -27,13 +27,13 @@ namespace Servicios.Servicios
         {
             _db = db;
         }
-        public async Task<EmpleadoDTO> ObtenerPorEmail(string email)
+        public async Task<EmpleadoDTOConId> ObtenerPorEmail(string email)
         {
             var empleadoModelo = await _db.Empleado.FirstOrDefaultAsync(x => x.Email == email).ConfigureAwait(false);
 
             if (empleadoModelo != null)
             {
-                return empleadoModelo.Adapt<EmpleadoDTO>();
+                return empleadoModelo.Adapt<EmpleadoDTOConId>();
             }
 
             throw new KeyNotFoundException("Empleado no encontrado");
