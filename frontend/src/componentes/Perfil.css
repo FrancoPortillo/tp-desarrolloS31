@@ -1,0 +1,51 @@
+/* Asegura que el contenedor ocupe todo el ancho */
+.perfil-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch; /* Hace que las cajas tengan la misma altura */
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 40px;
+  }
+  
+  /* Establece un tamaño fijo y consistente para ambas cajas */
+  .perfil-card {
+    flex: 1; /* Ambas tarjetas ocupan el mismo espacio */
+    max-width: 50%;
+    background: white;
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Organiza los elementos dentro de la caja */
+  }
+  
+  /* Ajusta el título para que ocupe todo el ancho */
+  h2 {
+    background: #e0dfdf;
+    padding: 15px;
+    margin: -20px -20px 20px -20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Evita que el contenido de una caja sea más grande que la otra */
+  .perfil-card p {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .perfil-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .perfil-card {
+      max-width: 90%;
+    }
+  }
+  

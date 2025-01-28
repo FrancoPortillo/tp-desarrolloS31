@@ -51,7 +51,20 @@ const axiosInstance = axios.create({
       throw error;
     }
   };
-  
+  // Función para obtener un empleado por ID
+export const obtenerEmpleadoPorId = async (token, id) => {
+  try {
+    const response = await axiosInstance.get(`/Empleado/ObtenerIndividual/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error al obtener empleado por ID:', error);
+    throw error;
+  }
+};
   // Función para obtener un empleado individual
   export const obtenerEmpleadoIndividual = async (id) => {
     try {
@@ -70,6 +83,7 @@ const axiosInstance = axios.create({
           Authorization: `Bearer ${token}`,
         },
       });
+      console.log("API response:", response.data);
       return response.data;
     } catch (error) {
       console.error('Error al obtener empleado por correo electrónico:', error);
