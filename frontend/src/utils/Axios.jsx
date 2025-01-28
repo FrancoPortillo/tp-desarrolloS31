@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 // Configuración base de Axios
 const axiosInstance = axios.create({
     baseURL: 'http://localhost:5237', // Cambia esto a la URL de tu API
@@ -8,7 +7,7 @@ const axiosInstance = axios.create({
       'Content-Type': 'application/json',
     },
   });
-  
+
   // Función para agregar un empleado
   export const agregarEmpleado = async (empleado) => {
     try {
@@ -60,6 +59,20 @@ const axiosInstance = axios.create({
       return response.data;
     } catch (error) {
       console.error('Error al obtener empleado individual:', error);
+      throw error;
+    }
+  };
+
+  export const obtenerEmpleadoPorEmail = async (token, email) => {
+    try {
+      const response = await axiosInstance.get(`/Empleado/ObtenerPorEmail/${email}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error al obtener empleado por correo electrónico:', error);
       throw error;
     }
   };
