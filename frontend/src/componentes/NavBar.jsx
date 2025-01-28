@@ -9,7 +9,7 @@ import { obtenerEmpleadoPorEmail } from '../Utils/Axios';
 
 export const NavBar = () => {
   const { loginWithRedirect, logout, user, isLoading, getAccessTokenSilently } = useAuth0();
-  const [employeeId, setEmployeeId] = useState();
+  const [employeeId, setEmployeeId] = useState(null);
 
   useEffect(() => {
     const fetchEmployeeId = async () => {
@@ -17,8 +17,7 @@ export const NavBar = () => {
         try {
           const token = await getAccessTokenSilently();
           const data = await obtenerEmpleadoPorEmail(token, user.email);
-          console.log(data);
-          setEmployeeId(data); // Asumiendo que el ID del empleado está en data.id
+          setEmployeeId(data.id); // Asumiendo que el ID del empleado está en data.id
         } catch (error) {
           console.error('Error al obtener el ID del empleado:', error);
         }
@@ -33,9 +32,7 @@ export const NavBar = () => {
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <Button color="inherit" component={NavLink} to='/'>Menu</Button>
-          {employeeId && (
-            <Button color="inherit" component={NavLink} to={`/perfil/${employeeId.id}`}>Perfil</Button>
-          )}
+          <Button color="inherit" component={NavLink} to={`/perfil/${employeeId}`}>Perfil</Button>
           <Button color="inherit" component={NavLink} to='/empleados'>Empleados</Button>
           <Button color="inherit" component={NavLink} to='/solicitudes'>Solicitudes</Button>
           {!isLoading && !user && (

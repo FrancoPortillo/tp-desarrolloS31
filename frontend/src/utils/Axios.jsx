@@ -83,7 +83,6 @@ export const obtenerEmpleadoPorId = async (token, id) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log("API response:", response.data);
       return response.data;
     } catch (error) {
       console.error('Error al obtener empleado por correo electrónico:', error);

@@ -13,7 +13,7 @@ export const Perfil = () => {
     const fetchEmployeeData = async () => {
       if (isAuthenticated) {
         try {
-          const token = await getAccessTokenSilently();
+          // const token = await getAccessTokenSilently();
           const data = await obtenerEmpleadoIndividual(id); // Obtener datos del empleado por ID
           setEmployeeData(data);
         } catch (error) {
