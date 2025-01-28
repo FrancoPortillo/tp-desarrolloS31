@@ -126,5 +126,23 @@ namespace RecursosHumanos.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
         }
+        [HttpGet("ObtenerPorEmail/{email}")]
+        public async Task<ActionResult<EmpleadoDTOConId>> ObtenerPorEmail(string email)
+        {
+            try
+            {
+                var empleado = await _empleado.ObtenerPorEmail(email).ConfigureAwait(false);
+                if (empleado != null)
+                {
+                    return Ok(empleado);
+                }
+                return NotFound("No se encontró el empleado.");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
+        }
     }
 }

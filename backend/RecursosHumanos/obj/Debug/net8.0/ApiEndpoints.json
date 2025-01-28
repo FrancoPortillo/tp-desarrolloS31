@@ -228,6 +228,32 @@
     ]
   },
   {
+    "ContainingType": "RecursosHumanos.Controllers.EmpleadoController",
+    "Method": "ObtenerPorEmail",
+    "RelativePath": "Empleado/ObtenerPorEmail/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CORE.DTO.EmpleadoDTOConId",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RecursosHumanos.Controllers.EmpresaController",
     "Method": "Agregar",
     "RelativePath": "Empresa/Agregar",
