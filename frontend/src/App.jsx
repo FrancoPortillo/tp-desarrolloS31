@@ -9,6 +9,18 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 export const App = () => {
+
+  const fetchEmpleado = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:5237/Empleado/ObtenerIndividual/${id}`);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('Error al obtener empleado individual:', error);
+    }
+  };
+  
+  fetchEmpleado(1); // Cambia el ID según sea necesario
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
 
   useEffect(() => {
@@ -43,7 +55,7 @@ export const App = () => {
       <MenuPrincipal />
       <Routes>
         <Route path="/perfil" element={<Perfil />} />
-        <Route path="/empleados" element={<Empleados />} />
+        <Route path="/empleados" element={<Empleados id={0} />} />
         <Route path="/solicitudes" element={<Solicitudes />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
