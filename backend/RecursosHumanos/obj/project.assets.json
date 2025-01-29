@@ -5448,11 +5448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+      "projectUniqueName": "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
       "projectName": "RecursosHumanos",
-      "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+      "projectPath": "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
       "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\",
+      "outputPath": "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5470,11 +5470,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
-              "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
+            "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
+              "projectPath": "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
             },
-            "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
-              "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj"
+            "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
+              "projectPath": "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj"
             }
           }
         }

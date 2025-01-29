@@ -28,3 +28,21 @@ C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\
 C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\refint\Servicios.dll
 C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.pdb
 C:\Users\santi\Source\Repos\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\ref\Servicios.dll
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\Servicios.deps.json
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\Servicios.dll
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\Servicios.pdb
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\CORE.dll
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\Data.dll
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\CORE.pdb
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\bin\Debug\net8.0\Data.pdb
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.csproj.AssemblyReference.cache
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfoInputs.cache
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfo.cs
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.csproj.CoreCompileInputs.cache
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.sourcelink.json
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.csproj.Up2Date
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.dll
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\refint\Servicios.dll
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\Servicios.pdb
+c:\Users\santi\OneDrive\Documentos\Facu\Desarrollo de Software\ProyectoDesarrollo\tp-desarrolloS31\backend\Servicios\obj\Debug\net8.0\ref\Servicios.dll

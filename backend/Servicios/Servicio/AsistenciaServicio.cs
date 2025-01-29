@@ -33,7 +33,8 @@ namespace Servicios.Servicios
         {
             foreach (var asistencia in asistencias)
             {
-                var nuevaAsistencia = asistencia.Adapt<Data.Models.Asistencia>();
+                var nuevaAsistencia = asistencia.Adapt<Asistencia>();
+                nuevaAsistencia.Id = 0; // Asegurarse de que el ID sea 0 para que la base de datos lo genere automáticamente
                 await _db.Asistencia.AddAsync(nuevaAsistencia).ConfigureAwait(false);
             }
             await _db.SaveChangesAsync().ConfigureAwait(false);

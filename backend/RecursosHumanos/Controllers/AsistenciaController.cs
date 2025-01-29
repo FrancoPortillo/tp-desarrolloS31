@@ -30,7 +30,7 @@ namespace RecursosHumanos.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al registrar asistencia.");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error al registrar asistencia.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error del back.");
             }
         }
         [HttpGet("ObtenerInasistencias/{idEmpleado}")]
