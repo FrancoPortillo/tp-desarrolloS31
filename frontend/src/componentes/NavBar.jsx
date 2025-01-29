@@ -34,6 +34,7 @@ export const NavBar = () => {
           <Button color="inherit" component={NavLink} to='/'>Menu</Button>
           <Button color="inherit" component={NavLink} to={`/perfil/${employeeId}`}>Perfil</Button>
           <Button color="inherit" component={NavLink} to='/empleados'>Empleados</Button>
+          <Button color="inherit" component={NavLink} to='/asistencia'>Asistencia</Button>
           <Button color="inherit" component={NavLink} to='/solicitudes'>Solicitudes</Button>
         </Typography>
         {!isLoading && !user && (

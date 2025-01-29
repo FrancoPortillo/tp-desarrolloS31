@@ -1,8 +1,8 @@
 import  { useState, useEffect } from 'react';
 import { obtenerEmpleados, registrarAsistencia, registrarLlegadaTarde } from '../../Utils/Axios';
-import './Asistencia.css';
+// import './Asistencia.css';
 
-const Asistencia = () => {
+export const Asistencia = () => {
   const [fecha, setFecha] = useState(new Date().toISOString().split('T')[0]);
   const [empleados, setEmpleados] = useState([]);
   const [asistencias, setAsistencias] = useState({});
