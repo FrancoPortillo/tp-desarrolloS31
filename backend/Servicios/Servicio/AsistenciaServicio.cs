@@ -33,7 +33,16 @@ namespace Servicios.Servicios
         {
             foreach (var asistencia in asistencias)
             {
-                var nuevaAsistencia = asistencia.Adapt<Asistencia>();
+                var validador = new AsistenciaAgregarValidador();
+                var validadorResultado = validador.Validate(asistencia);
+
+                if (!validadorResultado.IsValid)
+                {
+                    throw new ValidationException(validadorResultado.Errors);
+                }
+
+                // Mapster
+                var nuevaAsistencia = asistencia.Adapt<Data.Models.Asistencia>();
                 await _db.Asistencia.AddAsync(nuevaAsistencia).ConfigureAwait(false);
             }
             await _db.SaveChangesAsync().ConfigureAwait(false);
@@ -41,7 +50,7 @@ namespace Servicios.Servicios
         public async Task<int> ObtenerInasistencias(int idEmpleado)
         {
             var inasistencias = await _db.Asistencia
-            .Where(a => a.Empleado.Id == idEmpleado && !a.Presente)
+            .Where(a => a.IdEmpleado == idEmpleado && !a.Presente)
             .CountAsync()
             .ConfigureAwait(false);
 
@@ -84,7 +93,7 @@ namespace Servicios.Servicios
 
             asistenciaModelo.Fecha = asistencia.Fecha;
             asistenciaModelo.Presente = asistencia.Presente;
-            asistenciaModelo.Empleado.Id = asistencia.IdEmpleado;
+            asistenciaModelo.IdEmpleado = asistencia.IdEmpleado;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 
