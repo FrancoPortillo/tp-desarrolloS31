@@ -99,3 +99,24 @@ export const obtenerEmpleadoPorId = async (token, id) => {
       throw error;
     }
   };
+  
+  // Función para registrar asistencia
+  export const registrarAsistencia = async (asistencias) => {
+    try {
+      const response = await axiosInstance.post('/Asistencia/Registrar', asistencias);
+      return response.data;
+    } catch (error) {
+      console.error('Error al registrar asistencia:', error);
+      throw error;
+    }
+  };
+  // Función para registrar llegada tarde
+  export const registrarLlegadaTarde = async (llegadaTarde) => {
+    try {
+      const response = await axiosInstance.post('/LlegadaTarde/Registrar', llegadaTarde);
+      return response.data;
+    } catch (error) {
+      console.error('Error al registrar llegada tarde:', error);
+      throw error;
+    }
+  };

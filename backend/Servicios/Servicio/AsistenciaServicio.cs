@@ -17,6 +17,7 @@ namespace Servicios.Servicios
         Task<int> Modificar(AsistenciaDTOConId asistencia);
         Task<AsistenciaDTOConId> ObtenerIndividual(int id);
         Task<int> ObtenerInasistencias(int idEmpleado);
+        Task RegistrarAsistencia(List<AsistenciaDTOConId> asistencias);
         Task<List<AsistenciaDTOConId>> Obtener();
     }
 
@@ -27,6 +28,15 @@ namespace Servicios.Servicios
         public AsistenciaServicio(BdRrhhContext db)
         {
             _db = db;
+        }
+        public async Task RegistrarAsistencia(List<AsistenciaDTOConId> asistencias)
+        {
+            foreach (var asistencia in asistencias)
+            {
+                var nuevaAsistencia = asistencia.Adapt<Data.Models.Asistencia>();
+                await _db.Asistencia.AddAsync(nuevaAsistencia).ConfigureAwait(false);
+            }
+            await _db.SaveChangesAsync().ConfigureAwait(false);
         }
         public async Task<int> ObtenerInasistencias(int idEmpleado)
         {
