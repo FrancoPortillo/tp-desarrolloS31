@@ -16,6 +16,7 @@ namespace Servicios.Servicios
         Task<bool> Eliminar(int id);
         Task<int> Modificar(AsistenciaDTOConId asistencia);
         Task<AsistenciaDTOConId> ObtenerIndividual(int id);
+        Task<int> ObtenerInasistencias(int idEmpleado);
         Task<List<AsistenciaDTOConId>> Obtener();
     }
 
@@ -27,7 +28,15 @@ namespace Servicios.Servicios
         {
             _db = db;
         }
+        public async Task<int> ObtenerInasistencias(int idEmpleado)
+        {
+            var inasistencias = await _db.Asistencia
+            .Where(a => a.Empleado.Id == idEmpleado && !a.Presente)
+            .CountAsync()
+            .ConfigureAwait(false);
 
+            return inasistencias;
+        }
         public async Task<int> Agregar(AsistenciaDTO asistencia)
         {
             // FluentValidation

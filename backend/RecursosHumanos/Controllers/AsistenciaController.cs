@@ -19,7 +19,12 @@ namespace RecursosHumanos.Controllers
             _asistencia = asistencia;
             _logger = logger;
         }
-
+        [HttpGet("ObtenerInasistencias/{idEmpleado}")]
+        public async Task<ActionResult<int>> ObtenerInasistencias(int idEmpleado)
+        {
+            var inasistencias = await _asistencia.ObtenerInasistencias(idEmpleado).ConfigureAwait(false);
+            return Ok(inasistencias);
+        }
         [HttpPost("Agregar")]
         public async Task<ActionResult<string>> Agregar(AsistenciaDTO asistencia)
         {

@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useParams } from 'react-router-dom';
-import { obtenerEmpleadoIndividual, obtenerEmpleadoPorId } from '../Utils/Axios';
+import { obtenerEmpleadoIndividual, obtenerInasistencias } from '../../Utils/Axios';
 import './Perfil.css';
 
 export const Perfil = () => {
   const { id } = useParams(); // Obtener el ID del empleado desde los parámetros de la URL
   const { isAuthenticated, getAccessTokenSilently } = useAuth0();
   const [employeeData, setEmployeeData] = useState(null);
+  const [inasistencias, setInasistencias] = useState(0);
 
   useEffect(() => {
     const fetchEmployeeData = async () => {
       if (isAuthenticated) {
         try {
-          // const token = await getAccessTokenSilently();
           const data = await obtenerEmpleadoIndividual(id); // Obtener datos del empleado por ID
           setEmployeeData(data);
+
+          const inasistenciasData = await obtenerInasistencias(id); // Obtener inasistencias del empleado por ID
+          setInasistencias(inasistenciasData);
         } catch (error) {
           console.error('Error al obtener los datos del empleado:', error);
         }
@@ -45,6 +48,7 @@ export const Perfil = () => {
       <div className="perfil-card">
         <h2>Estadísticas</h2>
         <p><strong>Asistencias:</strong> {employeeData.asistencias}</p>
+        <p><strong>Inasistencias:</strong> {inasistencias}</p>
         <p><strong>Días de vacaciones:</strong> {employeeData.vacaciones}</p>
       </div>
     </div>
