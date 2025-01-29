@@ -17,7 +17,7 @@ namespace Servicios.Servicios
         Task<int> Modificar(AsistenciaDTOConId asistencia);
         Task<AsistenciaDTOConId> ObtenerIndividual(int id);
         Task<int> ObtenerInasistencias(int idEmpleado);
-        Task RegistrarAsistencia(List<AsistenciaDTOConId> asistencias);
+        Task RegistrarAsistencia(List<AsistenciaDTO> asistencias);
         Task<List<AsistenciaDTOConId>> Obtener();
     }
 
@@ -29,12 +29,11 @@ namespace Servicios.Servicios
         {
             _db = db;
         }
-        public async Task RegistrarAsistencia(List<AsistenciaDTOConId> asistencias)
+        public async Task RegistrarAsistencia(List<AsistenciaDTO> asistencias)
         {
             foreach (var asistencia in asistencias)
             {
                 var nuevaAsistencia = asistencia.Adapt<Asistencia>();
-                nuevaAsistencia.Id = 0; // Asegurarse de que el ID sea 0 para que la base de datos lo genere automáticamente
                 await _db.Asistencia.AddAsync(nuevaAsistencia).ConfigureAwait(false);
             }
             await _db.SaveChangesAsync().ConfigureAwait(false);

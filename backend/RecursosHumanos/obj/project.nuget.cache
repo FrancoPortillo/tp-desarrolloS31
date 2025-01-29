@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YPQiy+YG4+U=",
+  "dgSpecHash": "yoITcaymZ8I=",
   "success": true,
-  "projectFilePath": "c:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+  "projectFilePath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

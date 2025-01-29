@@ -89,6 +89,32 @@
   },
   {
     "ContainingType": "RecursosHumanos.Controllers.AsistenciaController",
+    "Method": "ObtenerInasistencias",
+    "RelativePath": "Asistencia/ObtenerInasistencias/{idEmpleado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmpleado",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.AsistenciaController",
     "Method": "ObtenerIndividual",
     "RelativePath": "Asistencia/ObtenerIndividual/{id}",
     "HttpMethod": "GET",
@@ -112,6 +138,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.AsistenciaController",
+    "Method": "RegistrarAsistencia",
+    "RelativePath": "Asistencia/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "asistencias",
+        "Type": "System.Collections.Generic.List\u00601[[CORE.DTO.Core.DTO.AsistenciaDTO, CORE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "RecursosHumanos.Controllers.EmpleadoController",

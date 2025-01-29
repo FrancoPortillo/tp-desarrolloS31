@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\core\\dto\\asistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\asistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\asistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\asistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Empleado.cs",
-              "RelativeDocumentMoniker": "DataBase\\Models\\Empleado.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Empleado.cs",
-              "RelativeToolTip": "DataBase\\Models\\Empleado.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAAAzAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Asistencia.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Asistencia.cs",
+              "RelativeDocumentMoniker": "DataBase\\Models\\Asistencia.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Asistencia.cs",
+              "RelativeToolTip": "DataBase\\Models\\Asistencia.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T00:02:26.273Z",
+              "WhenOpened": "2025-01-29T20:13:47.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AsistenciaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
+              "RelativeDocumentMoniker": "CORE\\DTO\\AsistenciaDTO.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
+              "RelativeToolTip": "CORE\\DTO\\AsistenciaDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:19:13.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AsistenciaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\AsistenciaServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\AsistenciaServicio.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:17:37.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AsistenciaController.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "RelativeToolTip": "RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:06:14.708Z",
               "EditorCaption": ""
             }
           ]

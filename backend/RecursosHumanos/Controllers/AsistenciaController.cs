@@ -20,7 +20,7 @@ namespace RecursosHumanos.Controllers
             _logger = logger;
         }
         [HttpPost("Registrar")]
-        public async Task<ActionResult> RegistrarAsistencia(List<AsistenciaDTOConId> asistencias)
+        public async Task<ActionResult> RegistrarAsistencia(List<AsistenciaDTO> asistencias)
         {
             try
             {
