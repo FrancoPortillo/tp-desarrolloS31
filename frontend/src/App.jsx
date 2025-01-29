@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { MenuPrincipal } from "./componentes/MenuPrincipal";
 import { Auth0Wrapper } from "./componentes/Auth0Wrapper";
-import { Perfil } from "./componentes/Perfil";
 import { Solicitudes } from "./componentes/Solicitudes";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import Empleados from "./paginas/empleados/Empleados";
+import Perfil from "./paginas/perfil/Perfil";
 
 export const App = () => {
   return (
