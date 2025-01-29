@@ -10,7 +10,7 @@ namespace CORE.DTO
     public class LLegadaTardeDTO
     {
         public required DateTime Fecha { get; set; }
-
+        public required string Motivo { get; set; }
         public required int MinutosTarde{ get; set; }
 
     }
