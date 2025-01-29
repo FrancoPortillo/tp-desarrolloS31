@@ -9,8 +9,9 @@ namespace Servicios.Validadores
         {
             RuleFor(e => e.Telefono)
                 .NotEmpty().WithMessage("El teléfono es obligatorio.")
-                .Matches(@"^\d{10}$").WithMessage("El teléfono debe tener 10 dígitos.");
-                
+                .Matches(@"^\d{10}$").WithMessage("El teléfono debe tener 10 dígitos.")
+                .Matches(@"^\+?\d{1,3}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$")
+                .WithMessage("El teléfono debe ser un número válido.");
             RuleFor(e => e.Nombre)
                 .NotEmpty().WithMessage("El nombre es obligatorio.");
 
