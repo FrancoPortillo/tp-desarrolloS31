@@ -29,6 +29,8 @@ namespace Data.Models
         [Required]
         public required string Puesto { get; set; }
         [Required]
+        public required string Telefono { get; set; }
+        [Required]
         public required string Rol { get; set; }
         [ForeignKey("IdEmpresa")]
         public required Empresa Empresa { get; set; }  //fk

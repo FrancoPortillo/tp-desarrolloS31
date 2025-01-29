@@ -7,12 +7,16 @@ namespace Servicios.Validadores
     {
         public EmpleadoAgregarValidador()
         {
+            RuleFor(e => e.Telefono)
+                .NotEmpty().WithMessage("El teléfono es obligatorio.")
+                .Matches(@"^\d{10}$").WithMessage("El teléfono debe tener 10 dígitos.");
+                
             RuleFor(e => e.Nombre)
                 .NotEmpty().WithMessage("El nombre es obligatorio.");
 
             RuleFor(e => e.Apellido)
                 .NotEmpty().WithMessage("El apellido es obligatorio.");
-
+            
             RuleFor(e => e.Legajo)
                 .GreaterThan(0).WithMessage("El legajo debe ser un número positivo.");
 

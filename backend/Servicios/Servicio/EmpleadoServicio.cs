@@ -80,6 +80,7 @@ namespace Servicios.Servicios
             empleadoModelo.Rol = empleado.Rol;
             empleadoModelo.Dni = empleado.Dni;
             empleadoModelo.Empresa.Id = empleado.IdEmpresa;
+            empleadoModelo.Telefono = empleado.Telefono;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 
