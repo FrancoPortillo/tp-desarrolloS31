@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\empleadoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\empleadoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Migrations\\20250129001714_AgregoTelefono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RecursosHumanos\\Migrations\\20250129001714_AgregoTelefono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EmpleadoServicio.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\EmpleadoServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicio\\EmpleadoServicio.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\EmpleadoServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicio\\EmpleadoServicio.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwBEAAAAYAAAAAAAAAA==",
+              "Title": "20250129001714_AgregoTelefono.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Migrations\\20250129001714_AgregoTelefono.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Migrations\\20250129001714_AgregoTelefono.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Migrations\\20250129001714_AgregoTelefono.cs",
+              "RelativeToolTip": "RecursosHumanos\\Migrations\\20250129001714_AgregoTelefono.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T04:49:47.013Z",
+              "WhenOpened": "2025-01-29T00:17:14.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmpleadoController.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "RelativeToolTip": "RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAAIkAAAARAAAAAAAAAA==",
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Empleado.cs",
+              "RelativeDocumentMoniker": "DataBase\\Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Empleado.cs",
+              "RelativeToolTip": "DataBase\\Models\\Empleado.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T23:00:13.773Z",
+              "WhenOpened": "2025-01-29T00:02:26.273Z",
               "EditorCaption": ""
             }
           ]
