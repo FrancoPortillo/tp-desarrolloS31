@@ -35,6 +35,7 @@ export const Perfil = () => {
         <h2>Datos del Empleado</h2>
         <p><strong>Nombre:</strong> {employeeData.nombre}</p>
         <p><strong>Apellido:</strong> {employeeData.apellido}</p>
+        <p><strong>Telefono:</strong> {employeeData.telefono}</p>
         <p><strong>Legajo:</strong> {employeeData.legajo}</p>
         <p><strong>DNI:</strong> {employeeData.dni}</p>
         <p><strong>Edad:</strong> {employeeData.edad}</p>

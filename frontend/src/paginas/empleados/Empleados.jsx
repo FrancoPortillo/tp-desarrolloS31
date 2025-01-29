@@ -21,11 +21,13 @@ export const Empleados = () => {
   return (
     <div>
       <ListadoEmpleados onAgregarEmpleado={handleAgregarEmpleado} />
-      <AgregarEmpleado
-        isOpen={mostrarPopup}
-        onRequestClose={handleCerrarPopup}
-        onEmpleadoAgregado={handleEmpleadoAgregado}
-      />
+      {mostrarPopup && (
+        <AgregarEmpleado
+          isOpen={mostrarPopup}
+          onRequestClose={handleCerrarPopup}
+          onEmpleadoAgregado={handleEmpleadoAgregado}
+        />
+      )}
     </div>
   );
 };

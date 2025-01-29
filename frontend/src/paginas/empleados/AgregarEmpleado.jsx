@@ -12,7 +12,7 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado }) 
     email: '',
     puesto: '',
     rol: '',
-    telefono: '' // Añadir el campo telefono
+    telefono: '' 
   });
 
   const handleAgregar = async () => {
@@ -28,7 +28,7 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado }) 
         email: '',
         puesto: '',
         rol: '',
-        telefono: '' // Resetear el campo telefono
+        telefono: '' 
       });
       onRequestClose();
     } catch (error) {
@@ -41,21 +41,66 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado }) 
     setNuevoEmpleado({ ...nuevoEmpleado, [name]: value });
   };
 
+  const handleClickOutside = (e) => {
+    if (e.target.classList.contains('popup')) {
+      onRequestClose();
+    }
+  };
+
   return (
-    <div className={`popup ${isOpen ? 'show' : ''}`}>
+    <div className={`popup ${isOpen ? 'show' : ''}`} onClick={handleClickOutside}>
       <div className="popup-content">
-        <h3>Agregar Nuevo Empleado</h3>
-        <input type="text" name="nombre" value={nuevoEmpleado.nombre} onChange={handleChange} placeholder="Nombre" />
-        <input type="text" name="apellido" value={nuevoEmpleado.apellido} onChange={handleChange} placeholder="Apellido" />
-        <input type="number" name="legajo" value={nuevoEmpleado.legajo} onChange={handleChange} placeholder="Legajo" />
-        <input type="number" name="edad" value={nuevoEmpleado.edad} onChange={handleChange} placeholder="Edad" />
-        <input type="text" name="dni" value={nuevoEmpleado.dni} onChange={handleChange} placeholder="DNI" />
-        <input type="email" name="email" value={nuevoEmpleado.email} onChange={handleChange} placeholder="Email" />
-        <input type="text" name="puesto" value={nuevoEmpleado.puesto} onChange={handleChange} placeholder="Puesto" />
-        <input type="text" name="rol" value={nuevoEmpleado.rol} onChange={handleChange} placeholder="Rol" />
-        <input type="text" name="telefono" value={nuevoEmpleado.telefono} onChange={handleChange} placeholder="Teléfono" /> {/* Añadir el campo telefono */}
-        <button className="boton-agregar" onClick={handleAgregar}>Agregar Empleado</button>
-        <button className="boton-cerrar" onClick={onRequestClose}>Cerrar</button>
+        <h3>Alta de Empleado</h3>
+        <form className="agregar-empleado-form">
+          <div className="form-group">
+            <label>
+              Nombre
+              <input type="text" name="nombre" value={nuevoEmpleado.nombre} onChange={handleChange} placeholder="Ej: Juan" />
+            </label>
+            <label>
+              Apellido
+              <input type="text" name="apellido" value={nuevoEmpleado.apellido} onChange={handleChange} placeholder="Ej: Pérez" />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Legajo
+              <input type="number" name="legajo" value={nuevoEmpleado.legajo} onChange={handleChange} placeholder="Ej: 12345" />
+            </label>
+            <label>
+              Edad
+              <input type="number" name="edad" value={nuevoEmpleado.edad} onChange={handleChange} placeholder="Ej: 30" />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              DNI
+              <input type="text" name="dni" value={nuevoEmpleado.dni} onChange={handleChange} placeholder="Ej: 12345678" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" value={nuevoEmpleado.email} onChange={handleChange} placeholder="Ej: juan.perez@correo.com" />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Puesto
+              <input type="text" name="puesto" value={nuevoEmpleado.puesto} onChange={handleChange} placeholder="Ej: Desarrollador" />
+            </label>
+            <label>
+              Rol
+              <input type="text" name="rol" value={nuevoEmpleado.rol} onChange={handleChange} placeholder="Ej: Admin" />
+            </label>
+          </div>
+          <label>
+            Teléfono
+            <input type="text" name="telefono" value={nuevoEmpleado.telefono} onChange={handleChange} placeholder="Ej: +54 221 1234567" />
+          </label>
+          <div className="botones">
+            <button className="boton-agregar" type="button" onClick={handleAgregar}>Agregar Empleado</button>
+            <button className="boton-cerrar" type="button" onClick={onRequestClose}>Cerrar</button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -35,25 +35,25 @@ export const NavBar = () => {
           <Button color="inherit" component={NavLink} to={`/perfil/${employeeId}`}>Perfil</Button>
           <Button color="inherit" component={NavLink} to='/empleados'>Empleados</Button>
           <Button color="inherit" component={NavLink} to='/solicitudes'>Solicitudes</Button>
-          {!isLoading && !user && (
-            <Button 
-              color="inherit"
-              sx={{ border: '1px solid' }}
-              onClick={() => loginWithRedirect()}
-            >
-              Ingresar
-            </Button>
-          )}
-          {!isLoading && user && (
-            <Button 
-              color="inherit"
-              sx={{ border: '1px solid' }}
-              onClick={() => logout({ returnTo: window.location.origin })}
-            >
-              Salir
-            </Button>
-          )}
         </Typography>
+        {!isLoading && !user && (
+          <Button 
+            color="inherit"
+            sx={{ border: '1px solid', marginLeft: 'auto' }}
+            onClick={() => loginWithRedirect()}
+          >
+            Ingresar
+          </Button>
+        )}
+        {!isLoading && user && (
+          <Button 
+            color="inherit"
+            sx={{ border: '1px solid', marginLeft: 'auto' }}
+            onClick={() => logout({ returnTo: window.location.origin })}
+          >
+            Salir
+          </Button>
+        )}
       </Toolbar>
     </AppBar>
   );
