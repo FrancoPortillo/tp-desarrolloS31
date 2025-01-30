@@ -1,0 +1,147 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+  
+  .popup-content {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 800px; /* Ajusta el ancho para pantallas grandes */
+    max-width: 100%;
+  }
+  
+  .popup-content h3 {
+    margin-top: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .popup-content .form-group label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .popup-content .form-group input,
+  .popup-content .form-group textarea {
+    display: block;
+    width: calc(100% - 20px);
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .popup-content .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-registrar,
+  .boton-cerrar {
+    padding: 10px 20px;
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content .boton-registrar {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .popup-content .boton-cerrar {
+    background-color: #f44336;
+    color: white;
+  }
+/* .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup-content h3 {
+    margin-top: 0;
+  }
+  
+  .popup-content .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .popup-content .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .popup-content .form-group input,
+  .popup-content .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .popup-content .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .popup-content .boton-registrar,
+  .popup-content .boton-cerrar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content .boton-registrar {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .popup-content .boton-cerrar {
+    background-color: #f44336;
+    color: white;
+  } */

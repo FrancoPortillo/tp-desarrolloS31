@@ -1,0 +1,126 @@
+.fecha-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+  }
+  
+  .fecha-label {
+    font-size: 20px;
+  }
+  
+  .asistencia-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .fondo {
+    background-color: #f5f4f4;
+  }
+  
+  .asistencia-table {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /*Distribuye las columnas de manera uniforme*/
+  }
+  
+  .asistencia-table th,
+  .asistencia-table td {
+    border: 1px solid #555454;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    word-wrap: break-word; /* Asegura que el texto no se desborde */
+  }
+  
+  .asistencia-table th {
+    background-color: #c7c7c7;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .boton-presente,
+  .boton-ausente,
+  .boton-tarde {
+    color: white;
+    border: none;
+    width: 90px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 30px;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+  .boton-presente {
+    background-color: #6ac26d;
+  }
+  
+  .boton-presente:hover {
+    background-color: #3f9442;
+  }
+  
+  .boton-ausente {
+    background-color: #cf6763;
+  }
+  
+  .boton-ausente:hover {
+    background-color: #c9302c;
+  }
+  
+  .boton-tarde {
+    background-color: #f9c071;
+  }
+  
+  .boton-tarde:hover {
+    background-color: #f6a83b;
+  }
+  
+  .boton-agregar-asistencia {
+    margin-top: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    width: fit-content;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  
+  .boton-agregar-asistencia:hover {
+    background-color: #3f9442;
+  }
+  
+  .boton-presente.activo,
+  .boton-ausente.activo,
+  .boton-tarde.activo {
+    opacity: 1;
+  }
+  
+  .boton-presente:not(.activo),
+  .boton-ausente:not(.activo),
+  .boton-tarde:not(.activo) {
+    opacity: 0.5;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 1600px) {
+    .asistencia-table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .asistencia-table th,
+    .asistencia-table td {
+      white-space: nowrap;
+    }
+  }
