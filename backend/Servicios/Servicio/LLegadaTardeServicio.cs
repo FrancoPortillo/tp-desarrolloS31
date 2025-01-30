@@ -14,6 +14,7 @@ namespace Servicios.Servicios
         Task<bool> Eliminar(int id);
         Task<int> Modificar(LLegadaTardeDTOConId llegadaTarde);
         Task<LLegadaTardeDTOConId> ObtenerIndividual(int id);
+        Task<int> ObtenerLlegadasTarde(int idempleado, DateTime startDate, DateTime endDate);
         Task<List<LLegadaTardeDTOConId>> Obtener();
     }
 
@@ -25,7 +26,15 @@ namespace Servicios.Servicios
         {
             _db = db;
         }
+        public async Task<int> ObtenerLlegadasTarde(int idEmpleado, DateTime startDate, DateTime endDate)
+        {
+            var llegadasTarde = await _db.LLegadaTarde
+            .Where(l => l.IdEmpleado == idEmpleado && l.Fecha >= startDate && l.Fecha <= endDate)
+            .CountAsync()
+            .ConfigureAwait(false);
 
+            return llegadasTarde;
+        }
         public async Task<int> Agregar(LLegadaTardeDTO llegadaTarde)
         {
             // FluentValidation

@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\asistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\asistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\llegadatardeservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\llegadatardeservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\llegadatardecontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\llegadatardecontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\llegadatarde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\llegadatarde.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\vacaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\vacaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\core\\dto\\llegadatardedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\llegadatardedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\core\\dto\\asistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\asistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +46,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LlegadaTardeControllercs.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\LlegadaTardeControllercs.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\LlegadaTardeControllercs.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\LlegadaTardeControllercs.cs",
+              "RelativeToolTip": "RecursosHumanos\\Controllers\\LlegadaTardeControllercs.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T02:16:18.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LLegadaTardeServicio.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\LLegadaTardeServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\LLegadaTardeServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\LLegadaTardeServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\LLegadaTardeServicio.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwB8AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T01:57:15.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vacaciones.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Vacaciones.cs",
+              "RelativeDocumentMoniker": "DataBase\\Models\\Vacaciones.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Vacaciones.cs",
+              "RelativeToolTip": "DataBase\\Models\\Vacaciones.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T01:56:32.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LlegadaTarde.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\LlegadaTarde.cs",
+              "RelativeDocumentMoniker": "DataBase\\Models\\LlegadaTarde.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\LlegadaTarde.cs",
+              "RelativeToolTip": "DataBase\\Models\\LlegadaTarde.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T01:54:12.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AsistenciaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
+              "RelativeDocumentMoniker": "CORE\\DTO\\AsistenciaDTO.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
+              "RelativeToolTip": "CORE\\DTO\\AsistenciaDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:19:13.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AsistenciaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\AsistenciaServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\AsistenciaServicio.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:17:37.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Asistencia.cs",
               "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Asistencia.cs",
               "RelativeDocumentMoniker": "DataBase\\Models\\Asistencia.cs",
@@ -43,41 +141,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AsistenciaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
-              "RelativeDocumentMoniker": "CORE\\DTO\\AsistenciaDTO.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\AsistenciaDTO.cs",
-              "RelativeToolTip": "CORE\\DTO\\AsistenciaDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T16:19:13.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AsistenciaServicio.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
-              "RelativeDocumentMoniker": "Servicios\\Servicio\\AsistenciaServicio.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
-              "RelativeToolTip": "Servicios\\Servicio\\AsistenciaServicio.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAywF8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T16:17:37.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AsistenciaController.cs",
               "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\AsistenciaController.cs",
               "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\AsistenciaController.cs",
               "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\AsistenciaController.cs",
               "RelativeToolTip": "RecursosHumanos\\Controllers\\AsistenciaController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T16:06:14.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LLegadaTardeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\LLegadaTardeDTO.cs",
+              "RelativeDocumentMoniker": "CORE\\DTO\\LLegadaTardeDTO.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\LLegadaTardeDTO.cs",
+              "RelativeToolTip": "CORE\\DTO\\LLegadaTardeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T01:58:42.387Z",
               "EditorCaption": ""
             }
           ]

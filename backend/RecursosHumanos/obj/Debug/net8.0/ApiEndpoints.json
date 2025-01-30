@@ -524,6 +524,32 @@
     ]
   },
   {
+    "ContainingType": "RecursosHumanos.Controllers.LlegadaTardeController",
+    "Method": "ObtenerLlegadasTarde",
+    "RelativePath": "LlegadaTarde/ObtenerLlegadasTarde/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RecursosHumanos.Controllers.VacacionesController",
     "Method": "Agregar",
     "RelativePath": "Vacaciones/Agregar",

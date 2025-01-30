@@ -36,7 +36,10 @@ namespace RecursosHumanos.Controllers
         [HttpGet("ObtenerInasistencias/{idEmpleado}")]
         public async Task<ActionResult<int>> ObtenerInasistencias(int idEmpleado)
         {
-            var inasistencias = await _asistencia.ObtenerInasistencias(idEmpleado).ConfigureAwait(false);
+            DateTime startDate = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, 1, 0, 0, 0, DateTimeKind.Utc);
+            DateTime endDate = startDate.AddMonths(1).AddDays(-1).AddHours(23).AddMinutes(59).AddSeconds(59);
+
+            var inasistencias = await _asistencia.ObtenerInasistencias(idEmpleado, startDate, endDate).ConfigureAwait(false);
             return Ok(inasistencias);
         }
         [HttpPost("Agregar")]
