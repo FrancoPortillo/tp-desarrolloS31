@@ -64,7 +64,7 @@ namespace Servicios.Servicios
 
             llegadaTardeModelo.Fecha = llegadaTarde.Fecha;
             llegadaTardeModelo.MinutosTarde = llegadaTarde.MinutosTarde;
-            llegadaTardeModelo.Empleado.Id = llegadaTarde.IdEmpleado;
+            llegadaTardeModelo.IdEmpleado = llegadaTarde.IdEmpleado;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 

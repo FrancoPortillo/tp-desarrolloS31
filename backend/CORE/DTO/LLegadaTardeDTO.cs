@@ -12,12 +12,11 @@ namespace CORE.DTO
         public required DateTime Fecha { get; set; }
         public required string Motivo { get; set; }
         public required int MinutosTarde{ get; set; }
-
+        public required int IdEmpleado { get; set; }
     }
     public class LLegadaTardeDTOConId : LLegadaTardeDTO
     {
         public int Id { get; set; }
-        public int IdEmpleado { get; set; }
     }
 }
 

@@ -21,6 +21,6 @@ namespace Data.Models
         [Required]
         public required int MinutosTarde{ get; set; }
         [ForeignKey("IdEmpleado")]
-        public required Empleado Empleado { get; set; }
+        public required int IdEmpleado { get; set; }
     }
 }

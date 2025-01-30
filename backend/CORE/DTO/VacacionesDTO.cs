@@ -17,14 +17,9 @@ namespace CORE.DTO
         public required int IdEmpleado { get; set; }
 
     }
-
-    //Agrego idempleado que es la fk?
-
     public class VacacionesDTOConId : VacacionesDTO
     {
         public int Id { get; set; }
     }
 }
-//hola
-
 

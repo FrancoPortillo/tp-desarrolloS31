@@ -66,7 +66,7 @@ namespace Servicios.Servicios
             vacacionesModelo.FechaInicio = vacaciones.FechaInicio;
             vacacionesModelo.FechaFin = vacaciones.FechaFin;
             vacacionesModelo.Aprobado = vacaciones.Aprobado;
-            vacacionesModelo.Empleado.Id = vacaciones.IdEmpleado;
+            vacacionesModelo.IdEmpleado = vacaciones.IdEmpleado;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 

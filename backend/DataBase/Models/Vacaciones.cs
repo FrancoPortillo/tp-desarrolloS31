@@ -21,6 +21,6 @@ namespace Data.Models
         [Required]
         public required Boolean Aprobado { get; set; }
         [ForeignKey("IdEmpleado")]
-        public required Empleado Empleado { get; set; }  //fk
+        public required int IdEmpleado { get; set; }  //fk
     }
 }
