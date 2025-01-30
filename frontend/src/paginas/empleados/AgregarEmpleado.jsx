@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { agregarEmpleado } from '../../Utils/Axios';
-import './Empleados.css';
+import './AgregarEmpleado.css';
 
 export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado }) => {
   const [nuevoEmpleado, setNuevoEmpleado] = useState({

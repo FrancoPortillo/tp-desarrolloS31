@@ -113,7 +113,7 @@ export const obtenerEmpleadoPorId = async (token, id) => {
   // Función para registrar llegada tarde
   export const registrarLlegadaTarde = async (llegadaTarde) => {
     try {
-      const response = await axiosInstance.post('/LlegadaTarde/Registrar', llegadaTarde);
+      const response = await axiosInstance.post('/LlegadaTarde/Agregar', llegadaTarde);
       return response.data;
     } catch (error) {
       console.error('Error al registrar llegada tarde:', error);
