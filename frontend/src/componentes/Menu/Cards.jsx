@@ -31,7 +31,8 @@ const cards = [
 function Cards() {
   console.log(cards)
   return (
-    <div className='container'>      
+    <div className='container'>
+      
       <div className='d-flex justify-content-center align-items-center h-100'>
         <div className='row'>
           {

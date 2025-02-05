@@ -96,7 +96,7 @@ export const obtenerEmpleadoPorEmail = async (token, email) => {
 // Función para obtener las inasistencias de un empleado por ID
 export const obtenerInasistencias = async (idEmpleado) => {
   try {
-    const response = await axiosInstance.get(`/Asistencia/ObtenerInasistencias/${idEmpleado}`);
+    const response = await axiosInstance.get(`/Inasistencia/ObtenerInasistencias/${idEmpleado}`);
     return response.data;
   } catch (error) {
     console.error('Error al obtener inasistencias:', error);

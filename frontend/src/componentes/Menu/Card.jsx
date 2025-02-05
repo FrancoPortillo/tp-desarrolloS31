@@ -12,7 +12,7 @@ function Card({title,imageSource,text ,url}) {
             text ? text : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, accusantium doloremque soluta ea sequi quasi quod harum minus ad, deserunt facilis maxime tempora atque dolorem nisi, ducimus beatae eligendi dignissimos eos! Magni minus, sed quas nisi laboriosam asperiores molestiae consequatur?'
           }
         </p>
-          <a href={"https:localhost:5173/perfil/35"} className='btn btn-outline-secondary rounded-0' target='_blank'>
+          <a href={url} className='btn btn-outline-secondary rounded-0' target='_blank'>
             CLICK AQUÍ
           </a>
       </div>
