@@ -1,20 +1,23 @@
 ﻿using CORE.DTO;
 using Data.Contexto;
-using Data;
+using Data.Models;
+using FluentValidation;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Servicios.Validadores;
-using Servicios.Servicios;
-using FluentValidation;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Servicios.Servicios
 {
     public interface IEmpleado
     {
-        Task<int> Agregar(EmpleadoDTO empleado);
+        Task<int> Agregar(EmpleadoDTOConId empleado);
         Task<bool> Eliminar(int id);
         Task<int> Modificar(EmpleadoDTOConId empleado);
         Task<EmpleadoDTOConId> ObtenerIndividual(int id);
+        Task<EmpleadoDTOConId> ObtenerPorEmail(string email);
         Task<List<EmpleadoDTOConId>> Obtener();
     }
 
@@ -27,7 +30,19 @@ namespace Servicios.Servicios
             _db = db;
         }
 
-        public async Task<int> Agregar(EmpleadoDTO empleado)
+        public async Task<EmpleadoDTOConId> ObtenerPorEmail(string email)
+        {
+            var empleadoModelo = await _db.Empleado.FirstOrDefaultAsync(x => x.Email == email).ConfigureAwait(false);
+
+            if (empleadoModelo != null)
+            {
+                return empleadoModelo.Adapt<EmpleadoDTOConId>();
+            }
+
+            throw new KeyNotFoundException("Empleado no encontrado");
+        }
+
+        public async Task<int> Agregar(EmpleadoDTOConId empleado)
         {
             var validador = new EmpleadoAgregarValidador();
             var validadorResultado = validador.Validate(empleado);
@@ -37,7 +52,7 @@ namespace Servicios.Servicios
                 throw new ValidationException(validadorResultado.Errors);
             }
 
-            var nuevoEmpleado = empleado.Adapt<Data.Models.Empleado>();
+            var nuevoEmpleado = empleado.Adapt<Empleado>();
             await _db.Empleado.AddAsync(nuevoEmpleado).ConfigureAwait(false);
             await _db.SaveChangesAsync().ConfigureAwait(false);
             return nuevoEmpleado.Id;
@@ -68,7 +83,9 @@ namespace Servicios.Servicios
             empleadoModelo.Puesto = empleado.Puesto;
             empleadoModelo.Rol = empleado.Rol;
             empleadoModelo.Dni = empleado.Dni;
-            empleadoModelo.Empresa.Id = empleado.IdEmpresa;
+            empleadoModelo.IdEmpresa = empleado.IdEmpresa;
+            empleadoModelo.Telefono = empleado.Telefono;
+            empleadoModelo.FotoPerfil = empleado.FotoPerfil; // Actualizar la foto de perfil
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 

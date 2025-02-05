@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\core\\dto\\permisoausenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\permisoausenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\core\\dto\\inasistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2EB0281-D3F7-4543-955B-7E913AAFD938}|CORE\\CORE.csproj|solutionrelative:core\\dto\\inasistenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\permisoausencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\permisoausencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\migrations\\20250205190640_agregoinasistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\migrations\\20250205190640_agregoinasistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\database\\models\\inasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991F2A25-B788-48AF-8F77-2B8D0DD3BA3C}|DataBase\\Data.csproj|solutionrelative:database\\models\\inasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\inasistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\inasistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\permisoausenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\permisoausenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\inasistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\inasistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\recursoshumanos\\controllers\\asistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{516C7CC0-E76A-4CD7-963E-6A9519FC5F1C}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\asistenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|c:\\users\\santi\\source\\repos\\tp-desarrollos31\\backend\\servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C90297C-723C-4B3F-B72E-01DB46C0B778}|Servicios\\Servicios.csproj|solutionrelative:servicios\\servicio\\asistenciaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +54,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmpleadoController.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "RelativeToolTip": "RecursosHumanos\\Controllers\\EmpleadoController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PermisoAusencia.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\PermisoAusencia.cs",
+              "RelativeDocumentMoniker": "DataBase\\Models\\PermisoAusencia.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\PermisoAusencia.cs",
+              "RelativeToolTip": "DataBase\\Models\\PermisoAusencia.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T23:00:13.773Z",
+              "WhenOpened": "2025-02-05T19:09:47.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250205190640_agregoInasistencias.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Migrations\\20250205190640_agregoInasistencias.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Migrations\\20250205190640_agregoInasistencias.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Migrations\\20250205190640_agregoInasistencias.cs",
+              "RelativeToolTip": "RecursosHumanos\\Migrations\\20250205190640_agregoInasistencias.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:06:40.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AsistenciaController.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "RelativeToolTip": "RecursosHumanos\\Controllers\\AsistenciaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:40:29.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InasistenciaController.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\InasistenciaController.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\InasistenciaController.cs",
+              "ToolTip": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Controllers\\InasistenciaController.cs",
+              "RelativeToolTip": "RecursosHumanos\\Controllers\\InasistenciaController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBoAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:51:02.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InasistenciaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\InasistenciaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\InasistenciaServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\InasistenciaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\InasistenciaServicio.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAqwBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:24:17.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inasistencia.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Inasistencia.cs",
+              "RelativeDocumentMoniker": "DataBase\\Models\\Inasistencia.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\DataBase\\Models\\Inasistencia.cs",
+              "RelativeToolTip": "DataBase\\Models\\Inasistencia.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:16:17.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InasistenciaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\InasistenciaDTO.cs",
+              "RelativeDocumentMoniker": "CORE\\DTO\\InasistenciaDTO.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\InasistenciaDTO.cs",
+              "RelativeToolTip": "CORE\\DTO\\InasistenciaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:10:44.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Program.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Program.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\Program.cs",
+              "RelativeToolTip": "RecursosHumanos\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T03:40:04.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PermisoAusenciaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\PermisoAusenciaDTO.cs",
+              "RelativeDocumentMoniker": "CORE\\DTO\\PermisoAusenciaDTO.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\CORE\\DTO\\PermisoAusenciaDTO.cs",
+              "RelativeToolTip": "CORE\\DTO\\PermisoAusenciaDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:12:06.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AsistenciaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\AsistenciaServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\AsistenciaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\AsistenciaServicio.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T18:53:21.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PermisoAusenciaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\PermisoAusenciaServicio.cs",
+              "RelativeDocumentMoniker": "Servicios\\Servicio\\PermisoAusenciaServicio.cs",
+              "ToolTip": "C:\\Users\\santi\\source\\repos\\tp-desarrolloS31\\backend\\Servicios\\Servicio\\PermisoAusenciaServicio.cs",
+              "RelativeToolTip": "Servicios\\Servicio\\PermisoAusenciaServicio.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwEkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:00:16.688Z",
               "EditorCaption": ""
             }
           ]

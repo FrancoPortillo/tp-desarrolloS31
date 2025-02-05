@@ -1,0 +1,15 @@
+.active-link .nav-button {
+  font-weight: bold;
+  color: #000000; /* Cambia esto al color que prefieras */
+  border-bottom: 3px solid #448cb9; /* Cambia esto al color que prefieras */
+  padding-bottom: 8px;
+  border-radius: 5px;
+}
+
+.nav-button {
+  color: #000000; /* Cambia esto al color que prefieras para los botones no activos */
+}
+
+.inactive-link .nav-button {
+  color: #000000; /* Cambia esto al color que prefieras para los botones no activos */
+}

@@ -15,11 +15,11 @@ namespace CORE.DTO
             public required DateTime Fecha { get; set; }
 
             public required Boolean Presente { get; set; }
+            public required int IdEmpleado { get; set; }
         }
         public class AsistenciaDTOConId : AsistenciaDTO
         {
             public int Id { get; set; }
-            public required int IdEmpleado { get; set; }
         }
     }
 }

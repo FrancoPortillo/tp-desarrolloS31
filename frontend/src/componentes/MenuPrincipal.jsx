@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { NavBar } from "./NavBar"
+import Cards from "./Menu/Cards";
+import "./menu/Cards.css"
 
 export const MenuPrincipal = () => {
 return (
-  <div>
-    <NavBar/>
+  <div className="menu">
+    <Cards/>
     <Outlet/>
   </div>
   )

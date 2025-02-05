@@ -16,6 +16,7 @@ namespace Servicios.Servicios
         Task<bool> Eliminar(int id);
         Task<int> Modificar(AsistenciaDTOConId asistencia);
         Task<AsistenciaDTOConId> ObtenerIndividual(int id);
+        Task RegistrarAsistencia(List<AsistenciaDTO> asistencias);
         Task<List<AsistenciaDTOConId>> Obtener();
     }
 
@@ -27,7 +28,24 @@ namespace Servicios.Servicios
         {
             _db = db;
         }
+        public async Task RegistrarAsistencia(List<AsistenciaDTO> asistencias)
+        {
+            foreach (var asistencia in asistencias)
+            {
+                var validador = new AsistenciaAgregarValidador();
+                var validadorResultado = validador.Validate(asistencia);
 
+                if (!validadorResultado.IsValid)
+                {
+                    throw new ValidationException(validadorResultado.Errors);
+                }
+
+                // Mapster
+                var nuevaAsistencia = asistencia.Adapt<Data.Models.Asistencia>();
+                await _db.Asistencia.AddAsync(nuevaAsistencia).ConfigureAwait(false);
+            }
+            await _db.SaveChangesAsync().ConfigureAwait(false);
+        }
         public async Task<int> Agregar(AsistenciaDTO asistencia)
         {
             // FluentValidation
@@ -65,7 +83,7 @@ namespace Servicios.Servicios
 
             asistenciaModelo.Fecha = asistencia.Fecha;
             asistenciaModelo.Presente = asistencia.Presente;
-            asistenciaModelo.Empleado.Id = asistencia.IdEmpleado;
+            asistenciaModelo.IdEmpleado = asistencia.IdEmpleado;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);
 

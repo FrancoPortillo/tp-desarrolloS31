@@ -1,0 +1,91 @@
+.empleados-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .fondo {
+    background-color: #f5f4f4;
+  }
+  
+  .empleados-table {
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /*Distribuye las columnas de manera uniforme*/
+  }
+  
+  .empleados-table th,
+  .empleados-table td {
+    border: 1px solid #555454;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+    word-wrap: break-word; /* Asegura que el texto no se desborde */
+  }
+  
+  .empleados-table th {
+    background-color: #c7c7c7;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .empleados-table th:hover {
+    background-color: #ccc;
+  }
+  
+  .boton-ver-perfil,
+  .boton-eliminar {
+    background-color: #888;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  .boton-ver-perfil:hover {
+    background-color: #666;
+  }
+  
+  .boton-eliminar {
+    background-color: #d9534f;
+  }
+  
+  .boton-eliminar:hover {
+    background-color: #c9302c;
+  }
+  
+  .boton-agregar {
+    margin-top: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: #888;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    width: fit-content;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  
+  .boton-agregar:hover {
+    background-color: #666;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 1600px) {
+    .empleados-table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .empleados-table th,
+    .empleados-table td {
+      white-space: nowrap;
+    }
+  }

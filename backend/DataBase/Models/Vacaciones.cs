@@ -15,12 +15,14 @@ namespace Data.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]//Autoincremental
         public int Id { get; set; }
         [Required]
+        public required DateTime FechaSolicitado { get; set; }
+        [Required]
         public required DateTime FechaInicio { get; set; }
         [Required]
         public required DateTime FechaFin { get; set; }
         [Required]
-        public required Boolean Aprobado { get; set; }
+        public required EstadoPermiso Estado { get; set; }
         [ForeignKey("IdEmpleado")]
-        public required Empleado Empleado { get; set; }  //fk
+        public required int IdEmpleado { get; set; }  //fk
     }
 }

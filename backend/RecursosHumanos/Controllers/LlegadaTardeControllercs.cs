@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Servicios.Validadores;
 using CORE.DTO;
+using Data.Models;
 
 namespace RecursosHumanos.Controllers
 {
@@ -19,7 +20,22 @@ namespace RecursosHumanos.Controllers
             _llegadaTarde = llegadaTarde;
             _logger = logger;
         }
+        [HttpGet("ObtenerLlegadasTarde/{id}")]
+        public async Task<ActionResult<int>> ObtenerLlegadasTarde(int id)
+        {
+            try
+            {
+                DateTime startDate = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, 1, 0, 0, 0, DateTimeKind.Utc);
+                DateTime endDate = startDate.AddMonths(1).AddDays(-1).AddHours(23).AddMinutes(59).AddSeconds(59);
 
+                var llegadasTarde = await _llegadaTarde.ObtenerLlegadasTarde(id, startDate, endDate);
+                return Ok(llegadasTarde);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al obtener las llegadas tarde: {ex.Message}");
+            }
+        }
         [HttpPost("Agregar")]
         public async Task<ActionResult<string>> Agregar(LLegadaTardeDTO llegadaTarde)
         {

@@ -16,7 +16,7 @@ namespace Servicios.Validadores
                 .Must(fecha => fecha != default(DateTime)).WithMessage("La fecha es inválida.")
                 .GreaterThan(fi => fi.FechaInicio).WithMessage("La fecha de fin debe ser posterior a la fecha de inicio.");
 
-            RuleFor(ff => ff.Aprobado)
+            RuleFor(ff => ff.Estado)
                 .NotNull().WithMessage("El estado de aprobación es obligatorio.");
         }
     }

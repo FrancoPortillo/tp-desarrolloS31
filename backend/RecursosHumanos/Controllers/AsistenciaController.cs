@@ -19,7 +19,20 @@ namespace RecursosHumanos.Controllers
             _asistencia = asistencia;
             _logger = logger;
         }
-
+        [HttpPost("Registrar")]
+        public async Task<ActionResult> RegistrarAsistencia(List<AsistenciaDTO> asistencias)
+        {
+            try
+            {
+                await _asistencia.RegistrarAsistencia(asistencias).ConfigureAwait(false);
+                return Ok("Asistencia registrada con éxito.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al registrar asistencia.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error del back.");
+            }
+        }
         [HttpPost("Agregar")]
         public async Task<ActionResult<string>> Agregar(AsistenciaDTO asistencia)
         {

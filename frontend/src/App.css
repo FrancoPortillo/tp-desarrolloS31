@@ -1,0 +1,8 @@
+body, html {
+    background-color: #f4f4f4; /* Cambia esto al color que prefieras */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif; /* Puedes cambiar la fuente si lo deseas */
+  }
