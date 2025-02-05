@@ -12,7 +12,7 @@ namespace CORE.DTO
 
         public required DateTime FechaFin { get; set; }
 
-        public required Boolean Aprobado { get; set; }
+        public required string Estado { get; set; }
 
         public required int IdEmpleado { get; set; }
 

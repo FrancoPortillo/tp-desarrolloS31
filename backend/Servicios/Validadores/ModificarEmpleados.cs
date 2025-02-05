@@ -7,6 +7,16 @@ namespace Servicios.Validadores
     {
         public EmpleadoModificarValidador()
         {
+            RuleFor(e => e.Dni)
+                .NotEmpty().WithMessage("El DNI es obligatorio.")
+                .Matches(@"^\d{8}$").WithMessage("El DNI debe tener 8 dígitos.");
+
+            RuleFor(e => e.Telefono)
+                .NotEmpty().WithMessage("El teléfono es obligatorio.")
+                .Matches(@"^\d{10}$").WithMessage("El teléfono debe tener 10 dígitos.")
+                .Matches(@"^\+?\d{1,3}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$")
+                .WithMessage("El teléfono debe ser un número válido.");
+
             RuleFor(a => a.Nombre)
                 .NotEmpty().WithMessage("El nombre es obligatorio.");
 

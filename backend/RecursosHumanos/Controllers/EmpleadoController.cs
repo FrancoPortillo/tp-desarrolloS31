@@ -17,7 +17,7 @@ namespace RecursosHumanos.Controllers
         }
 
         [HttpPost("Agregar")]
-        public async Task<ActionResult<string>> Agregar(EmpleadoDTO empleado)
+        public async Task<ActionResult<EmpleadoDTOConId>> Agregar(EmpleadoDTOConId empleado)
         {
             var validador = new EmpleadoAgregarValidador();
             var validadorResultado = validador.Validate(empleado);
@@ -32,7 +32,9 @@ namespace RecursosHumanos.Controllers
                 var nuevoId = await _empleado.Agregar(empleado).ConfigureAwait(false);
                 if (nuevoId > 0)
                 {
-                    return Ok("Empleado creado con éxito");
+                    // Obtener el empleado recién creado con su ID
+                    var empleadoCreado = await _empleado.ObtenerIndividual(nuevoId).ConfigureAwait(false);
+                    return Ok(empleadoCreado);
                 }
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error al crear el empleado.");
             }

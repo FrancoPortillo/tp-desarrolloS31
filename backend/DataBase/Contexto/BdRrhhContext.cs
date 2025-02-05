@@ -17,6 +17,9 @@ namespace Data.Contexto
         {
         }
 
+        public virtual DbSet<Inasistencia> Inasistencia { get; set; }
+        public virtual DbSet<Documentacion> Documentacion { get; set; }
+        public virtual DbSet<PermisoAusencia> PermisoAusencia { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<Asistencia> Asistencia { get; set; }

@@ -16,7 +16,6 @@ namespace Servicios.Servicios
         Task<bool> Eliminar(int id);
         Task<int> Modificar(AsistenciaDTOConId asistencia);
         Task<AsistenciaDTOConId> ObtenerIndividual(int id);
-        Task<int> ObtenerInasistencias(int idEmpleado, DateTime startDate, DateTime endDate);
         Task RegistrarAsistencia(List<AsistenciaDTO> asistencias);
         Task<List<AsistenciaDTOConId>> Obtener();
     }
@@ -46,15 +45,6 @@ namespace Servicios.Servicios
                 await _db.Asistencia.AddAsync(nuevaAsistencia).ConfigureAwait(false);
             }
             await _db.SaveChangesAsync().ConfigureAwait(false);
-        }
-        public async Task<int> ObtenerInasistencias(int idEmpleado, DateTime startDate, DateTime endDate)
-        {
-            var inasistencias = await _db.Asistencia
-            .Where(a => a.IdEmpleado == idEmpleado && !a.Presente && a.Fecha >= startDate && a.Fecha <= endDate)
-            .CountAsync()
-            .ConfigureAwait(false);
-
-            return inasistencias;
         }
         public async Task<int> Agregar(AsistenciaDTO asistencia)
         {

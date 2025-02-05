@@ -1,5 +1,41 @@
 [
   {
+    "ContainingType": "RecursosHumanos.Controllers.DocumentacionController",
+    "Method": "Agregar",
+    "RelativePath": "Agregar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NombreArchivo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Content",
+        "Type": "System.Byte[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEmpleado",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RecursosHumanos.Controllers.AsistenciaController",
     "Method": "Agregar",
     "RelativePath": "Asistencia/Agregar",
@@ -89,32 +125,6 @@
   },
   {
     "ContainingType": "RecursosHumanos.Controllers.AsistenciaController",
-    "Method": "ObtenerInasistencias",
-    "RelativePath": "Asistencia/ObtenerInasistencias/{idEmpleado}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "idEmpleado",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RecursosHumanos.Controllers.AsistenciaController",
     "Method": "ObtenerIndividual",
     "RelativePath": "Asistencia/ObtenerIndividual/{id}",
     "HttpMethod": "GET",
@@ -156,6 +166,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RecursosHumanos.Controllers.DocumentacionController",
+    "Method": "Eliminar",
+    "RelativePath": "Eliminar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RecursosHumanos.Controllers.EmpleadoController",
     "Method": "Agregar",
     "RelativePath": "Empleado/Agregar",
@@ -165,13 +191,13 @@
     "Parameters": [
       {
         "Name": "empleado",
-        "Type": "CORE.DTO.EmpleadoDTO",
+        "Type": "CORE.DTO.EmpleadoDTOConId",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "CORE.DTO.EmpleadoDTOConId",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -410,6 +436,166 @@
     ]
   },
   {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "Agregar",
+    "RelativePath": "Inasistencia/Agregar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inasistencia",
+        "Type": "CORE.DTO.InasistenciaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "Eliminar",
+    "RelativePath": "Inasistencia/Eliminar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "Modificar",
+    "RelativePath": "Inasistencia/Modificar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inasistencia",
+        "Type": "CORE.DTO.InasistenciaDTOConId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "Obtener",
+    "RelativePath": "Inasistencia/Obtener",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CORE.DTO.Core.DTO.AsistenciaDTOConId, CORE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "ObtenerInasistencias",
+    "RelativePath": "Inasistencia/ObtenerInasistencias/{idEmpleado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEmpleado",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "ObtenerIndividual",
+    "RelativePath": "Inasistencia/ObtenerIndividual/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CORE.DTO.InasistenciaDTOConId",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.InasistenciaController",
+    "Method": "ObtenerInasistencias",
+    "RelativePath": "Inasistencia/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RecursosHumanos.Controllers.LlegadaTardeController",
     "Method": "Agregar",
     "RelativePath": "LlegadaTarde/Agregar",
@@ -540,6 +726,223 @@
     "ReturnTypes": [
       {
         "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.DocumentacionController",
+    "Method": "Modificar",
+    "RelativePath": "Modificar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "NombreArchivo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Content",
+        "Type": "System.Byte[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEmpleado",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.DocumentacionController",
+    "Method": "Obtener",
+    "RelativePath": "Obtener",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CORE.DTO.DocumentacionDTOConId, CORE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.DocumentacionController",
+    "Method": "ObtenerIndividual",
+    "RelativePath": "ObtenerIndividual/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CORE.DTO.DocumentacionDTOConId",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.PermisoAusenciaController",
+    "Method": "Agregar",
+    "RelativePath": "PermisoAusencia/Agregar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "permiso",
+        "Type": "CORE.DTO.PermisoAusenciaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.PermisoAusenciaController",
+    "Method": "Eliminar",
+    "RelativePath": "PermisoAusencia/Eliminar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.PermisoAusenciaController",
+    "Method": "Modificar",
+    "RelativePath": "PermisoAusencia/Modificar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "permiso",
+        "Type": "CORE.DTO.PermisoAusenciaDTOConId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.PermisoAusenciaController",
+    "Method": "Obtener",
+    "RelativePath": "PermisoAusencia/Obtener",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CORE.DTO.PermisoAusenciaDTOConId, CORE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.PermisoAusenciaController",
+    "Method": "ObtenerIndividual",
+    "RelativePath": "PermisoAusencia/ObtenerIndividual/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CORE.DTO.PermisoAusenciaDTOConId",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecursosHumanos.Controllers.PermisoAusenciaController",
+    "Method": "ObtenerPorEmpleado",
+    "RelativePath": "PermisoAusencia/ObtenerPorEmpleado/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CORE.DTO.PermisoAusenciaDTOConId, CORE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

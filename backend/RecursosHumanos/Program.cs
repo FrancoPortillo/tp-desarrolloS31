@@ -24,6 +24,9 @@ builder.Services.AddScoped<IEmpleado, EmpleadoServicio>();
 builder.Services.AddScoped<IVacaciones, VacacionesServicio>();
 builder.Services.AddScoped<ILlegadaTarde, LlegadaTardeServicio>();
 builder.Services.AddScoped<IAsistencia, AsistenciaServicio>();
+builder.Services.AddScoped<IPermisoAusencia, PermisoAusenciaServicio>();
+builder.Services.AddScoped<IDocumentacion, DocumentacionServicio>();
+builder.Services.AddScoped<IInasistencia, InasistenciaServicio>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -36,6 +39,9 @@ builder.Services.AddValidatorsFromAssemblyContaining<EmpleadoAgregarValidador>()
 builder.Services.AddValidatorsFromAssemblyContaining<VacacionesAgregarValidador>();
 builder.Services.AddValidatorsFromAssemblyContaining<LLegadaTardeAgregarValidador>();
 builder.Services.AddValidatorsFromAssemblyContaining<AsistenciaAgregarValidador>();
+builder.Services.AddValidatorsFromAssemblyContaining<DocumentacionAgregarValidador>();
+builder.Services.AddValidatorsFromAssemblyContaining<PermisoAgregarValidador>();
+
 
 // Configurar el contexto de la base de datos
 builder.Services.AddDbContext<BdRrhhContext>(options =>
