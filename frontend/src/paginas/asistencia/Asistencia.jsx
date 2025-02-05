@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { obtenerEmpleados, registrarAsistencia } from '../../Utils/Axios';
 import LlegadaTarde from './LlegadaTarde';
+import { TextField } from '@mui/material';
 import './Asistencia.css';
+import Boton from '../../componentes/Boton/Boton';
+import Swal from 'sweetalert2';
 
 export const Asistencia = () => {
   const [fecha, setFecha] = useState(new Date().toISOString().split('T')[0]);
@@ -17,6 +20,12 @@ export const Asistencia = () => {
         setEmpleados(data);
       } catch (error) {
         console.error('Error al obtener empleados:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Error al obtener empleados.',
+          confirmButtonText: 'OK'
+        });
       }
     };
 
@@ -61,8 +70,20 @@ export const Asistencia = () => {
 
     try {
       await registrarAsistencia(asistenciasArray);
+      Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Asistencia registrada correctamente.',
+        confirmButtonText: 'OK'
+      });
     } catch (error) {
       console.error('Error al registrar asistencia:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Error al registrar asistencia.',
+        confirmButtonText: 'OK'
+      });
     }
   };
 
@@ -121,8 +142,7 @@ export const Asistencia = () => {
             ))}
           </tbody>
         </table>
-
-        <button className="boton-agregar-asistencia" onClick={handleSubmit}>Registrar Asistencia</button>
+        <Boton texto="Registrar Asistencia" onClick={handleSubmit}/>
 
         {mostrarPopup && (
           <LlegadaTarde
