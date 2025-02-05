@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj": {}
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
         "projectName": "CORE",
-        "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
+        "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\obj\\",
+        "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj": {
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj",
+        "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\DataBase\\obj\\",
+        "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj": {
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
         "projectName": "RecursosHumanos",
-        "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
+        "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\RecursosHumanos.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\",
+        "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\RecursosHumanos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -173,11 +173,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
-                "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
+              "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
+                "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
               },
-              "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
-                "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj"
+              "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
+                "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj"
               }
             }
           }
@@ -243,14 +243,14 @@
         }
       }
     },
-    "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
+    "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj",
         "projectName": "Servicios",
-        "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj",
+        "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\Servicios.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\Servicios\\obj\\",
+        "outputPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\Servicios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -268,11 +268,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
-                "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
+              "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj": {
+                "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\CORE\\CORE.csproj"
               },
-              "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj": {
-                "projectPath": "C:\\Users\\santi\\Source\\Repos\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj"
+              "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj": {
+                "projectPath": "C:\\Users\\santi\\OneDrive\\Documentos\\Facu\\Desarrollo de Software\\ProyectoDesarrollo\\tp-desarrolloS31\\backend\\DataBase\\Data.csproj"
               }
             }
           }
