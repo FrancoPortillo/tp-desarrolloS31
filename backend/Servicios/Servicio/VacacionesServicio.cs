@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Servicios.Validadores;
 using CORE.DTO;
 using FluentValidation;
+using Data.Models;
 
 namespace Servicios.Servicios
 {
@@ -65,7 +66,7 @@ namespace Servicios.Servicios
 
             vacacionesModelo.FechaInicio = vacaciones.FechaInicio;
             vacacionesModelo.FechaFin = vacaciones.FechaFin;
-            vacacionesModelo.Aprobado = vacaciones.Aprobado;
+            vacacionesModelo.Estado = Enum.Parse<EstadoPermiso>(vacaciones.Estado, true); // Convertir el string a la enumeración
             vacacionesModelo.IdEmpleado = vacaciones.IdEmpleado;
 
             await _db.SaveChangesAsync().ConfigureAwait(false);

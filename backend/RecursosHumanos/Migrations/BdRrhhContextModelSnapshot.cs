@@ -41,9 +41,41 @@ namespace RecursosHumanos.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdEmpleado");
-
                     b.ToTable("Asistencia");
+                });
+
+            modelBuilder.Entity("Data.Models.Documentacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<byte[]>("Contenido")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
+                    b.Property<int>("IdEmpleado")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("InasistenciaId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("NombreArchivo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("PermisoAusenciaId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InasistenciaId");
+
+                    b.HasIndex("PermisoAusenciaId");
+
+                    b.ToTable("Documentacion");
                 });
 
             modelBuilder.Entity("Data.Models.Empleado", b =>
@@ -69,6 +101,9 @@ namespace RecursosHumanos.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<byte[]>("FotoPerfil")
+                        .HasColumnType("bytea");
+
                     b.Property<int>("IdEmpresa")
                         .HasColumnType("integer");
 
@@ -92,8 +127,6 @@ namespace RecursosHumanos.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IdEmpresa");
 
                     b.ToTable("Empleado");
                 });
@@ -127,6 +160,32 @@ namespace RecursosHumanos.Migrations
                     b.ToTable("Empresa");
                 });
 
+            modelBuilder.Entity("Data.Models.Inasistencia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Detalles")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("IdEmpleado")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Inasistencia");
+                });
+
             modelBuilder.Entity("Data.Models.LLegadaTarde", b =>
                 {
                     b.Property<int>("Id")
@@ -150,9 +209,42 @@ namespace RecursosHumanos.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdEmpleado");
-
                     b.ToTable("LLegadaTarde");
+                });
+
+            modelBuilder.Entity("Data.Models.PermisoAusencia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Detalles")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Estado")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("FechaFin")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("FechaInicio")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("FechaSolicitado")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("IdEmpleado")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PermisoAusencia");
                 });
 
             modelBuilder.Entity("Data.Models.Vacaciones", b =>
@@ -163,8 +255,8 @@ namespace RecursosHumanos.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("Aprobado")
-                        .HasColumnType("boolean");
+                    b.Property<int>("Estado")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("FechaFin")
                         .HasColumnType("timestamp with time zone");
@@ -172,58 +264,36 @@ namespace RecursosHumanos.Migrations
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<DateTime>("FechaSolicitado")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<int>("IdEmpleado")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdEmpleado");
-
                     b.ToTable("Vacaciones");
                 });
 
-            modelBuilder.Entity("Data.Models.Asistencia", b =>
+            modelBuilder.Entity("Data.Models.Documentacion", b =>
                 {
-                    b.HasOne("Data.Models.Empleado", "Empleado")
-                        .WithMany()
-                        .HasForeignKey("IdEmpleado")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Data.Models.Inasistencia", null)
+                        .WithMany("Documentaciones")
+                        .HasForeignKey("InasistenciaId");
 
-                    b.Navigation("Empleado");
+                    b.HasOne("Data.Models.PermisoAusencia", null)
+                        .WithMany("Documentaciones")
+                        .HasForeignKey("PermisoAusenciaId");
                 });
 
-            modelBuilder.Entity("Data.Models.Empleado", b =>
+            modelBuilder.Entity("Data.Models.Inasistencia", b =>
                 {
-                    b.HasOne("Data.Models.Empresa", "Empresa")
-                        .WithMany()
-                        .HasForeignKey("IdEmpresa")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Empresa");
+                    b.Navigation("Documentaciones");
                 });
 
-            modelBuilder.Entity("Data.Models.LLegadaTarde", b =>
+            modelBuilder.Entity("Data.Models.PermisoAusencia", b =>
                 {
-                    b.HasOne("Data.Models.Empleado", "Empleado")
-                        .WithMany()
-                        .HasForeignKey("IdEmpleado")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Empleado");
-                });
-
-            modelBuilder.Entity("Data.Models.Vacaciones", b =>
-                {
-                    b.HasOne("Data.Models.Empleado", "Empleado")
-                        .WithMany()
-                        .HasForeignKey("IdEmpleado")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Empleado");
+                    b.Navigation("Documentaciones");
                 });
 #pragma warning restore 612, 618
         }
