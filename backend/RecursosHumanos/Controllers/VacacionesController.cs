@@ -19,7 +19,13 @@ namespace RecursosHumanos.Controllers
             _vacaciones = vacaciones;
             _logger = logger;
         }
-
+        [HttpGet("calendario")]
+        public async Task<IActionResult> ObtenerCalendarioVacaciones()
+        {
+            var calendario = await _vacaciones.ObtenerCalendarioVacaciones();
+            return Ok(calendario);
+        }
+        
         [HttpPost("Agregar")]
         public async Task<ActionResult<string>> Agregar(VacacionesDTO vacaciones)
         {
@@ -52,32 +58,25 @@ namespace RecursosHumanos.Controllers
             }
         }
 
-        [HttpPut("Modificar")]
-        public async Task<ActionResult<string>> Modificar(VacacionesDTOConId vacaciones)
+        [HttpPatch("Modificar/{estado}/{id}")]
+        public async Task<ActionResult> ModificarEstado(int id, string estado)
         {
-            var validador = new VacacionesModificarValidador();
-            var validadorResultado = validador.Validate(vacaciones);
-
-            if (!validadorResultado.IsValid)
-            {
-                return BadRequest(validadorResultado.Errors);
-            }
 
             try
             {
-                var nuevoId = await _vacaciones.Modificar(vacaciones).ConfigureAwait(false);
-                if (nuevoId > 0)
+                var vacacion = await _vacaciones.ModificarEstado(id, estado);
+                if (vacacion != null)
                 {
-                    return Ok($"Vacaciones modificada con éxito, ID: {nuevoId}");
+                    return Ok(vacacion);
                 }
-
-                return NotFound("No se encontró la Vacaciones para modificar.");
+                return NotFound("No se encontró la vacacion para modificar.");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al modificar la Vacaciones.");
+                // Log the exception
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
+
         }
 
         [HttpDelete("Eliminar/{id}")]
@@ -139,6 +138,21 @@ namespace RecursosHumanos.Controllers
                 _logger.LogError(ex, "Error al obtener la Vacaciones.");
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
+        }
+        [HttpGet("ObtenerPorEmpleado/{id}")]
+        public async Task<ActionResult<List<VacacionesDTOConId>>> ObtenerPorEmpleado(int id)
+        {
+            try
+            {
+                var vacaciones = await _vacaciones.ObtenerPorEmpleado(id);
+                return Ok(vacaciones);
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción y devolver una respuesta adecuada
+                return StatusCode(500, new { message = "Error al obtener las vacaciones", details = ex.Message });
+            }
+
         }
     }
 }

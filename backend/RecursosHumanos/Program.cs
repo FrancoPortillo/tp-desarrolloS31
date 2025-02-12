@@ -1,16 +1,16 @@
 using Data.Contexto;
 using FluentValidation.AspNetCore;
-using Microsoft.EntityFrameworkCore;
-using Servicios.Validadores;
-using Servicios.Servicios;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+using Servicios.Servicios;
+using Servicios.Validadores;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
-builder.Services.AddCors(options => 
+builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontEnd", builder => 
+    options.AddPolicy("AllowFrontEnd", builder =>
     {
         builder.WithOrigins("http://localhost:5173")
                .AllowAnyHeader()
@@ -42,7 +42,6 @@ builder.Services.AddValidatorsFromAssemblyContaining<AsistenciaAgregarValidador>
 builder.Services.AddValidatorsFromAssemblyContaining<DocumentacionAgregarValidador>();
 builder.Services.AddValidatorsFromAssemblyContaining<PermisoAgregarValidador>();
 
-
 // Configurar el contexto de la base de datos
 builder.Services.AddDbContext<BdRrhhContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -63,6 +62,7 @@ else
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles(); 
 app.UseAuthorization();
 app.UseCors("AllowFrontEnd");
 

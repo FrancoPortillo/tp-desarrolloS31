@@ -1,6 +1,8 @@
 ﻿using CORE.DTO;
+using Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Servicios.Servicios;
+using Servicios.Validadores;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -19,8 +21,17 @@ namespace RecursosHumanos.Controllers
         [HttpGet("ObtenerPorEmpleado/{id}")]
         public async Task<ActionResult<List<PermisoAusenciaDTOConId>>> ObtenerPorEmpleado(int id)
         {
-            var permisos = await _permisoAusenciaServicio.ObtenerPorEmpleado(id);
-            return Ok(permisos);
+            try
+            {
+                var permisos = await _permisoAusenciaServicio.ObtenerPorEmpleado(id);
+                return Ok(permisos);
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción y devolver una respuesta adecuada
+                return StatusCode(500, new { message = "Error al obtener permisos de ausencia", details = ex.Message });
+            }
+
         }
         [HttpGet("Obtener")]
         public async Task<ActionResult<List<PermisoAusenciaDTOConId>>> Obtener()
@@ -44,19 +55,52 @@ namespace RecursosHumanos.Controllers
         public async Task<ActionResult<int>> Agregar(PermisoAusenciaDTO permiso)
         {
             var id = await _permisoAusenciaServicio.Agregar(permiso);
-            return CreatedAtAction(nameof(ObtenerIndividual), new { id }, id);
+            return Ok(id);
         }
 
-        [HttpPut("Modificar/{id}")]
-        public async Task<ActionResult> Modificar(int id, PermisoAusenciaDTOConId permiso)
+        [HttpPut("Modificar")]
+        public async Task<ActionResult> Modificar(PermisoAusenciaDTOConId permiso)
         {
-            if (id != permiso.Id)
+            var validador = new PermisoModificarValidador();
+            var validadorResultado = validador.Validate(permiso);
+            if (!validadorResultado.IsValid)
             {
-                return BadRequest("El ID del permiso no coincide.");
+                return BadRequest(validadorResultado.Errors);
+            }
+            try
+            {
+                var nuevoId = await _permisoAusenciaServicio.Modificar(permiso).ConfigureAwait(false);
+                if (nuevoId > 0)
+                {
+                    return Ok($"Permiso modificado con éxito, ID: {nuevoId}");
+                }
+                return NotFound("No se encontró el permiso para modificar.");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+            }
+        }
+        [HttpPatch("Modificar/{estado}/{id}")]
+        public async Task<ActionResult> ModificarEstado(int id, string estado)
+        {
+            
+            try
+            {
+                var permiso = await _permisoAusenciaServicio.ModificarEstado(id, estado);
+                if (permiso != null)
+                {
+                    return Ok(permiso);
+                }
+                return NotFound("No se encontró el permiso para modificar.");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
             }
 
-            await _permisoAusenciaServicio.Modificar(permiso);
-            return NoContent();
         }
 
         [HttpDelete("Eliminar/{id}")]

@@ -12,7 +12,18 @@ namespace RecursosHumanos.Controllers
         {
             _documentacionServicio = documentacionServicio;
         }
-
+        [HttpGet("Descargar/{id}")]
+        public async Task<string> Descargar(int idDocumentacion)
+        {
+            var ruta = await _documentacionServicio.Descargar(idDocumentacion);
+            return ruta;
+        }
+        [HttpPost("SubirArchivo")]
+        public async Task<string> SubirArchivo(int idDocumentacion, IFormFile archivo)
+        {
+            var ruta = await _documentacionServicio.SubirArchivo(idDocumentacion, archivo);
+            return ruta;
+        }
         [HttpGet("Obtener")]
         public async Task<ActionResult<List<DocumentacionDTOConId>>> Obtener()
         {

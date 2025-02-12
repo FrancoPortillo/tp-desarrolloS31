@@ -6,8 +6,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace RecursosHumanos.Migrations
 {
+    /// <inheritdoc />
     public partial class InitialCreate : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -39,9 +41,11 @@ namespace RecursosHumanos.Migrations
                     Email = table.Column<string>(type: "text", nullable: false),
                     Puesto = table.Column<string>(type: "text", nullable: false),
                     Telefono = table.Column<string>(type: "text", nullable: false),
-                    Rol = table.Column<string>(type: "text", nullable: false),
+                    DiasVacaciones = table.Column<int>(type: "integer", nullable: false),
+                    Eliminado = table.Column<bool>(type: "boolean", nullable: false),
+                    Rol = table.Column<string>(type: "text", nullable: true),
                     IdEmpresa = table.Column<int>(type: "integer", nullable: false),
-                    FotoPerfil = table.Column<byte[]>(type: "bytea", nullable: true)
+                    FotoPerfil = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -62,6 +66,22 @@ namespace RecursosHumanos.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Empresa", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Inasistencia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Tipo = table.Column<int>(type: "integer", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Detalles = table.Column<string>(type: "text", nullable: false),
+                    IdEmpleado = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Inasistencia", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -89,7 +109,7 @@ namespace RecursosHumanos.Migrations
                     FechaInicio = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     FechaFin = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     FechaSolicitado = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Tipo = table.Column<string>(type: "text", nullable: false),
+                    Tipo = table.Column<int>(type: "integer", nullable: false),
                     Detalles = table.Column<string>(type: "text", nullable: false),
                     Estado = table.Column<int>(type: "integer", nullable: false),
                     IdEmpleado = table.Column<int>(type: "integer", nullable: false)
@@ -108,6 +128,7 @@ namespace RecursosHumanos.Migrations
                     FechaSolicitado = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     FechaInicio = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     FechaFin = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Dias = table.Column<int>(type: "integer", nullable: false),
                     Estado = table.Column<int>(type: "integer", nullable: false),
                     IdEmpleado = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -123,15 +144,38 @@ namespace RecursosHumanos.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     NombreArchivo = table.Column<string>(type: "text", nullable: false),
-                    Contenido = table.Column<byte[]>(type: "bytea", nullable: false),
-                    IdEmpleado = table.Column<int>(type: "integer", nullable: false)
+                    IdEmpleado = table.Column<int>(type: "integer", nullable: false),
+                    RutaArchivo = table.Column<string>(type: "text", nullable: true),
+                    InasistenciaId = table.Column<int>(type: "integer", nullable: true),
+                    PermisoAusenciaId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Documentacion", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Documentacion_Inasistencia_InasistenciaId",
+                        column: x => x.InasistenciaId,
+                        principalTable: "Inasistencia",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Documentacion_PermisoAusencia_PermisoAusenciaId",
+                        column: x => x.PermisoAusenciaId,
+                        principalTable: "PermisoAusencia",
+                        principalColumn: "Id");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Documentacion_InasistenciaId",
+                table: "Documentacion",
+                column: "InasistenciaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Documentacion_PermisoAusenciaId",
+                table: "Documentacion",
+                column: "PermisoAusenciaId");
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
@@ -151,6 +195,9 @@ namespace RecursosHumanos.Migrations
 
             migrationBuilder.DropTable(
                 name: "Vacaciones");
+
+            migrationBuilder.DropTable(
+                name: "Inasistencia");
 
             migrationBuilder.DropTable(
                 name: "PermisoAusencia");

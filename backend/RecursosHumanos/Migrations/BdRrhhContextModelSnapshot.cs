@@ -17,7 +17,7 @@ namespace RecursosHumanos.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.1")
+                .HasAnnotation("ProductVersion", "9.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -52,10 +52,6 @@ namespace RecursosHumanos.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<byte[]>("Contenido")
-                        .IsRequired()
-                        .HasColumnType("bytea");
-
                     b.Property<int>("IdEmpleado")
                         .HasColumnType("integer");
 
@@ -68,6 +64,9 @@ namespace RecursosHumanos.Migrations
 
                     b.Property<int?>("PermisoAusenciaId")
                         .HasColumnType("integer");
+
+                    b.Property<string>("RutaArchivo")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -90,6 +89,9 @@ namespace RecursosHumanos.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("DiasVacaciones")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Dni")
                         .IsRequired()
                         .HasColumnType("text");
@@ -97,12 +99,15 @@ namespace RecursosHumanos.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("integer");
 
+                    b.Property<bool>("Eliminado")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<byte[]>("FotoPerfil")
-                        .HasColumnType("bytea");
+                    b.Property<string>("FotoPerfil")
+                        .HasColumnType("text");
 
                     b.Property<int>("IdEmpresa")
                         .HasColumnType("integer");
@@ -119,7 +124,6 @@ namespace RecursosHumanos.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Rol")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Telefono")
@@ -254,6 +258,9 @@ namespace RecursosHumanos.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Dias")
+                        .HasColumnType("integer");
 
                     b.Property<int>("Estado")
                         .HasColumnType("integer");
