@@ -1,0 +1,82 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+  z-index: 1000; 
+}
+
+.popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center; 
+}
+
+.boton-guardar,
+.boton-cerrar {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 45px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+.boton-cerrar {
+  background-color: #ff4d4d;
+}
+
+.boton-guardar:hover {
+  background-color: #45a049;
+}
+
+.boton-cerrar:hover {
+  background-color: #ff1a1a;
+}
+.error {
+  color: red;
+  font-weight: normal;
+  font-size: 0.875em; /* Tamaño de fuente más pequeño */
+  margin-top: 0.25em; /* Espacio entre el campo y el mensaje de error */
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-group label {
+    width: 100%;
+  }
+}

@@ -7,6 +7,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { useEffect, useState } from 'react';
 import { obtenerEmpleadoPorEmail } from '../Utils/Axios';
 import "./NavBar.css";
+import LogoutButton from './LogoutButton';
+import worksense  from "../assets/worksense.png"
 
 export const NavBar = ({ setIsAdmin, isAdmin }) => {
   const { loginWithRedirect, logout, user, isLoading, getAccessTokenSilently } = useAuth0();
@@ -17,6 +19,8 @@ export const NavBar = ({ setIsAdmin, isAdmin }) => {
       if (user) {
         try {
           const token = await getAccessTokenSilently();
+          console.log("TOKEN", token);
+          console.log("USER", user.email);
           const data = await obtenerEmpleadoPorEmail(token, user.email);
           setEmployeeId(data.id); // Asumiendo que el ID del empleado está en data.id
           setIsAdmin(data.rol === "admin"); // Asumiendo que el atributo rol está en data.rol
@@ -30,11 +34,23 @@ export const NavBar = ({ setIsAdmin, isAdmin }) => {
   }, [user, getAccessTokenSilently, setIsAdmin]);
 
   return (
-    <AppBar position="static" color="default">
+    <>
+    <header style={{ 
+        height: '10vh', 
+        backgroundColor: 'rgb(59, 59, 59)',
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',
+        padding: '0 2vh'
+        }}>
+        <img src={worksense} alt="Miksa Logo" style={{ height: '40%' }} className="clickable-logo" />
+        <LogoutButton />
+      </header>
+    <AppBar position="static" color="#c0cbff">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <NavLink to='/' className={({ isActive }) => isActive ? "active-link" : "inactive-link"} style={{ textDecoration: 'none' }}>
-            <Button color="inherit" className="nav-button">WorkSense</Button>
+            <Button color="inherit" className="nav-button">Menú</Button>
           </NavLink>
           <NavLink to={`/perfil/${employeeId}`} className={({ isActive }) => isActive ? "active-link" : "inactive-link"} style={{ textDecoration: 'none' }}>
             <Button color="inherit" className="nav-button">Perfil</Button>
@@ -53,26 +69,9 @@ export const NavBar = ({ setIsAdmin, isAdmin }) => {
             <Button color="inherit" className="nav-button">Solicitudes</Button>
           </NavLink>
         </Typography>
-        {!isLoading && !user && (
-          <Button 
-            color="inherit"
-            sx={{ border: '1px solid', marginLeft: 'auto' }}
-            onClick={() => loginWithRedirect()}
-          >
-            Ingresar
-          </Button>
-        )}
-        {!isLoading && user && (
-          <Button 
-            color="inherit"
-            sx={{ border: '1px solid', marginLeft: 'auto' }}
-            onClick={() => logout({ returnTo: window.location.origin })}
-          >
-            Salir
-          </Button>
-        )}
       </Toolbar>
     </AppBar>
+    </>
   );
 };
 

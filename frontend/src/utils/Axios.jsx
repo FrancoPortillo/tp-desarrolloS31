@@ -7,7 +7,6 @@ const axiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
 });
-
 // Función para agregar un empleado
 export const agregarEmpleado = async (empleado) => {
   try {
@@ -115,6 +114,15 @@ export const registrarAsistencia = async (asistencias) => {
   }
 };
 
+export const registrarInasistencia = async (inasistencia) => {
+  try {
+    const response = await axiosInstance.post('/Inasistencia/Agregar', inasistencia);
+    return response.data;
+  } catch (error) {
+    console.error('Error al registrar la inasistencia:', error);
+    throw error;
+  }
+};
 // Función para registrar llegada tarde
 export const registrarLlegadaTarde = async (llegadaTarde) => {
   try {
@@ -170,16 +178,24 @@ export const agregarPermisoAusencia = async (permiso) => {
 };
 
 // Función para modificar una solicitud de permiso de ausencia
-export const modificarPermisoAusencia = async (id, permiso) => {
+export const modificarPermisoAusencia = async (permiso) => {
   try {
-    const response = await axiosInstance.put(`/PermisoAusencia/Modificar/${id}`, permiso);
+    const response = await axiosInstance.put(`/PermisoAusencia/Modificar`, permiso);
     return response.data;
   } catch (error) {
     console.error('Error al modificar permiso de ausencia:', error);
     throw error;
   }
 };
-
+export const modificarEstadoPermiso = async (id, estado) => {
+  try {
+    const response = await axiosInstance.patch(`/PermisoAusencia/Modificar/${estado}/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error al modificar permiso de ausencia:', error);
+    throw error;
+  }
+};
 // Función para eliminar una solicitud de permiso de ausencia
 export const eliminarPermisoAusencia = async (id) => {
   try {
@@ -187,6 +203,44 @@ export const eliminarPermisoAusencia = async (id) => {
     return response.data;
   } catch (error) {
     console.error('Error al eliminar permiso de ausencia:', error);
+    throw error;
+  }
+};
+
+export const obtenerVacaciones = async () => {
+  try {
+    const response = await axiosInstance.get('/Vacaciones/calendario');
+    return response.data;
+  } catch (error) {
+    console.error('Error al obtener vacaciones:', error);
+    throw error;
+  }
+};
+
+export const modificarVacaciones = async (id, estado) => {
+  try {
+    const response = await axiosInstance.patch(`/Vacaciones/Modificar/${estado}/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error al modificar vacaciones:', error);
+    throw error;
+  }
+};
+export const obtenerVacacionesPorEmpleado = async (idEmpleado) => {
+  try {
+    const response = await axiosInstance.get(`/Vacaciones/ObtenerPorEmpleado/${idEmpleado}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error al obtener vacaciones por empleado:', error);
+    throw error;
+  }
+};
+export const agregarVacaciones = async (vacacion) => {
+  try {
+    const response = await axiosInstance.post('/Vacaciones/Agregar', vacacion);
+    return response.data;
+  } catch (error) {
+    console.error('Error al agregar permiso de ausencia:', error);
     throw error;
   }
 };

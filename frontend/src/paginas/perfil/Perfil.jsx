@@ -19,7 +19,7 @@ export const Perfil = () => {
 
     useEffect(() => {
         const fetchEmployeeData = async () => {
-            if (isAuthenticated) {
+            if (user) {
                 try {
                     const token = await getAccessTokenSilently();
                     const adminData = await obtenerEmpleadoPorEmail(token, user.email);
@@ -63,13 +63,6 @@ export const Perfil = () => {
                         <p><strong>Edad:</strong> {employeeData.edad}</p>
                         <p><strong>Correo:</strong> {employeeData.email}</p>
                     </div>
-                    <div className="perfil-card">
-                        <h3>Dirección</h3>
-                        <p><strong>Calle:</strong> {employeeData.direccion}</p>
-                        <p><strong>Ciudad:</strong> {employeeData.ciudad}</p>
-                        <p><strong>Provincia:</strong> {employeeData.provincia}</p>
-                        <p><strong>País:</strong> {employeeData.pais}</p>
-                    </div>
                 </div>
                 <div className="perfil-column">
                     <div className="perfil-card">
@@ -82,7 +75,7 @@ export const Perfil = () => {
                         <div className="progress-bar-container">
                             <div className="progress-bar" style={{ width: `${llegadasTarde * 33}%` }}></div>
                         </div>
-                        <p><strong>Días de Vacaciones:</strong> {employeeData.vacaciones}</p>
+                        <p><strong>Días de Vacaciones:</strong> {employeeData.diasVacaciones}</p>
                     </div>
                 </div>
             </div>

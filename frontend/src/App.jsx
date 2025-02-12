@@ -10,6 +10,7 @@ import ProtectedRoute from "./componentes/ProtectedRoute";
 import "./App.css"
 import { useState } from 'react';
 import { withAuthenticationRequired } from "@auth0/auth0-react";
+import Vacaciones from "./paginas/vacaciones/Vacaciones";
 
 export const App = () => {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -24,6 +25,7 @@ export const App = () => {
           <Route path="/empleados" element={<Empleados />} />
           <Route path="/asistencia" element={<Asistencia />} />
           <Route path="/solicitudes" element={<Solicitudes isAdmin={isAdmin} />} />
+          <Route path="/vacaciones" element={<Vacaciones isAdmin={isAdmin} />} />
         </Route>
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>

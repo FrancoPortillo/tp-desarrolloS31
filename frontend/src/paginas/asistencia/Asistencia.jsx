@@ -5,12 +5,15 @@ import { TextField } from '@mui/material';
 import './Asistencia.css';
 import Boton from '../../componentes/Boton/Boton';
 import Swal from 'sweetalert2';
+import { BasicDatePicker } from '../../componentes/BasicDatePicker';
+import Inasistencia from './Inasistencia';
 
 export const Asistencia = () => {
   const [fecha, setFecha] = useState(new Date().toISOString().split('T')[0]);
   const [empleados, setEmpleados] = useState([]);
   const [asistencias, setAsistencias] = useState({});
   const [mostrarPopup, setMostrarPopup] = useState(false);
+  const [mostrarInasistencia, setMostrarInasistencia] = useState(false);
   const [selectedEmpleado, setSelectedEmpleado] = useState(null);
 
   useEffect(() => {
@@ -56,8 +59,18 @@ export const Asistencia = () => {
     setMostrarPopup(true);
   };
 
+  const handleInasistencia = (idEmpleado) => {
+    setAsistencias({
+      ...asistencias,
+      [idEmpleado]: { fecha, presente: false },
+    });
+    setSelectedEmpleado(idEmpleado);
+    setMostrarInasistencia(true);
+  };
+
   const handleCerrarPopup = () => {
     setMostrarPopup(false);
+    setMostrarInasistencia(false);
     setSelectedEmpleado(null);
   };
 
@@ -91,15 +104,15 @@ export const Asistencia = () => {
     <>
       <div className="asistencia-container">
         <div className="fecha-container">
-          <label className="fecha-label">Fecha:</label>
-            <TextField
-              type="date"
-              value={fecha}
-              onChange={handleFechaChange}
-              InputLabelProps={{ shrink: true }}
-              inputProps={{ max: new Date().toISOString().split('T')[0] }}
-              className="fecha-selector"
-            />
+          <BasicDatePicker
+            label="Fecha"
+            date={fecha}
+            onChange={handleFechaChange}
+            InputLabelProps={{ shrink: true }}
+            inputProps={{ max: new Date().toISOString().split('T')[0] }}
+            required
+            sx={{ mb: 2 }}
+          />
         </div>
         <table className="asistencia-table">
           <thead>
@@ -127,7 +140,7 @@ export const Asistencia = () => {
                   </button>
                   <button
                     className={`boton-ausente ${asistencias[empleado.id]?.presente === false ? 'activo' : ''}`}
-                    onClick={() => handleAsistenciaChange(empleado.id, false)}
+                    onClick={() => handleInasistencia(empleado.id)}
                   >
                     Ausente
                   </button>
@@ -147,6 +160,14 @@ export const Asistencia = () => {
         {mostrarPopup && (
           <LlegadaTarde
             isOpen={mostrarPopup}
+            onRequestClose={handleCerrarPopup}
+            idEmpleado={selectedEmpleado}
+            fecha={fecha}
+          />
+        )}
+        {mostrarInasistencia && (
+          <Inasistencia
+            isOpen={mostrarInasistencia}
             onRequestClose={handleCerrarPopup}
             idEmpleado={selectedEmpleado}
             fecha={fecha}

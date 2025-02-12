@@ -43,7 +43,8 @@
   .popup-content .form-group input,
   .popup-content .form-group textarea {
     display: block;
-    width: calc(100% - 20px);
+    /* width: calc(100% - 20px); */
+    width: 100%;
     margin-top: 5px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -79,4 +80,7 @@
     font-weight: normal;
     font-size: 0.875em; /* Tamaño de fuente más pequeño */
     margin-top: 0.25em; /* Espacio entre el campo y el mensaje de error */
+  }
+  .detalle .titulo {
+    width: 100%;
   }
