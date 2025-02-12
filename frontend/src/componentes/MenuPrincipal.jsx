@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import Cards from "./Menu/Cards";
+import AcercaDe from "./Menu/AcercaDe";
 
 
 export const MenuPrincipal = () => {
 return (
   <div className="menu">
-    <Cards/>
+    <AcercaDe/>
     <Outlet/>
   </div>
   )

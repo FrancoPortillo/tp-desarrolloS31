@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { modificarEstadoPermiso, modificarPermisoAusencia, modificarVacaciones, obtenerEmpleados, obtenerPermisosAusencia, obtenerVacaciones } from '../../Utils/Axios';
+import { descargarDocumentacion, modificarEstadoPermiso, modificarPermisoAusencia, modificarVacaciones, obtenerEmpleados, obtenerPermisosAusencia, obtenerVacaciones } from '../../Utils/Axios';
 import { Alert, Box, Button, Modal, Snackbar } from '@mui/material';
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 import { ConfirmDialog } from '../../componentes/ConfirmDialog';
 import CalendarioVacaciones from '../vacaciones/CalendarioVacaciones';
 const SolicitudesAdmin = () => {
@@ -84,22 +85,22 @@ const SolicitudesAdmin = () => {
     const COLUMNS = [
       { field: "nombre", headerName: "Empleado", width: 145 },
       
-      { field: "tipoSolicitud", headerName: "Tipo", width: 100 },
+      { field: "tipoSolicitud", headerName: "Tipo", width: 90 },
       {
         field: "fechaInicio",
-        headerName: "Fecha de inicio",
-        width: 150,
+        headerName: "Inicio",
+        width: 100,
         type: "date",
         valueFormatter: (params) => new Date(params).toLocaleDateString(),
       },
       {
         field: "fechaFin",
-        headerName: "Fecha de finalizacion",
-        width: 150,
+        headerName: "Finalizacion",
+        width: 100,
         type: "date",
         valueFormatter: (params) => new Date(params).toLocaleDateString(),
       },
-      { field: "estado", headerName: "Estado", width: 135 },
+      { field: "estado", headerName: "Estado", width: 120 },
       {
         field: "approve",
         headerName: "Aprobar",
@@ -128,31 +129,21 @@ const SolicitudesAdmin = () => {
           </Button>
         ),
       },
-      // {
-      //   field: "documentation",
-      //   headerName: "Documentacion",
-      //   width: 150,
-      //   renderCell: (params) => (
-      //     <Button
-      //       size="small"
-      //       onClick={() => params.row.documentation && downloadFile(params.row.documentation.id)}
-      //       sx={{ color: params.row.documentation ? 'blue' : 'gray' }}
-      //       disabled={!params.row.documentation}
-      //     >
-      //     <DownloadRoundedIcon />
-      //     </Button>
-      //   ),
-      // },
-      // {
-      //   field: "details",
-      //   headerName: "Detalles",
-      //   width: 150,
-      //   renderCell: (params) => (
-      //     <Button variant="outlined" size="small" onClick={() => handleOpen(params.row)}>
-      //       Ver Detalles
-      //     </Button>
-      //   ),
-      // },
+      {
+        field: "documentaciones",
+        headerName: "Documentacion",
+        width: 150,
+        renderCell: (params) => (
+          <Button
+            size="small"
+            onClick={() => params.row.documentaciones && descargarDocumentacion(params.row.documentaciones.id)}
+            sx={{ color: params.row.documentaciones ? 'blue' : 'gray' }}
+            disabled={!params.row.documentaciones}
+          >
+          <DownloadRoundedIcon />
+          </Button>
+        ),
+      }
     ];
 
   return (

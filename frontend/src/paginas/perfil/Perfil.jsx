@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useParams } from 'react-router-dom';
-import { obtenerEmpleadoIndividual, obtenerEmpleadoPorEmail, obtenerInasistencias, obtenerllegadasTarde } from '../../Utils/Axios';
+import { obtenerEmpleadoIndividual, obtenerEmpleadoPorEmail, obtenerInasistencias, obtenerllegadasTarde, getImage } from '../../Utils/Axios';
 import Swal from 'sweetalert2';
 import './Perfil.css';
 import Boton from '../../componentes/Boton/Boton';
@@ -16,6 +16,7 @@ export const Perfil = () => {
     const [llegadasTarde, setLlegadasTarde] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [admin, setAdmin] = useState();
+    const [fotoPerfilUrl, setFotoPerfilUrl] = useState(defaultAvatar);
 
     useEffect(() => {
         const fetchEmployeeData = async () => {
@@ -28,6 +29,12 @@ export const Perfil = () => {
                     setEmployeeData(data);
                     setLlegadasTarde(await obtenerllegadasTarde(id));
                     setInasistencias(await obtenerInasistencias(id));
+
+                    if (data.fotoPerfil) {
+                        const imageBlob = await getImage(id);
+                        const imageUrl = URL.createObjectURL(imageBlob);
+                        setFotoPerfilUrl(imageUrl);
+                    }
                 } catch (error) {
                     console.error('Error al obtener los datos del empleado:', error);
                     Swal.fire({
@@ -49,7 +56,7 @@ export const Perfil = () => {
     return (
         <div className="perfil-container">
             <div className="perfil-header">
-                <img src={employeeData.fotoPerfil ? `data:image/jpeg;base64,${employeeData.fotoPerfil}` : defaultAvatar} alt="Perfil" className="perfil-avatar" />
+                <img src={fotoPerfilUrl} alt="Perfil" className="perfil-avatar" />
                 <h1>{employeeData.nombre} {employeeData.apellido}</h1>
                 <h2>{employeeData.puesto}</h2>
             </div>

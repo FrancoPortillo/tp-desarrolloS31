@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { agregarVacaciones, obtenerEmpleados, obtenerPermisosAusencia, obtenerVacaciones } from '../../Utils/Axios';
 import Boton from '../../componentes/Boton/Boton';
-import Swal from 'sweetalert2';
+import { Snackbar, Alert } from '@mui/material';
 import './SolicitudVacaciones.css';
 import CalendarioVacaciones from './CalendarioVacaciones';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -27,6 +27,7 @@ export const VacacionesSolicitud = ({ isOpen, onRequestClose, onVacacionAgregada
     idEmpleado: idEmpleado
   });
   const [errors, setErrors] = useState({});
+  const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
 
   const validateVacacion = () => {
     const newErrors = {};
@@ -65,21 +66,12 @@ export const VacacionesSolicitud = ({ isOpen, onRequestClose, onVacacionAgregada
       const response = await agregarVacaciones(vacacionData);
       setNuevaVacacion(response);
       onVacacionAgregada(response);
+      callApi();
       onRequestClose();
-      Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Solicitud de vacaciones guardada correctamente.',
-        confirmButtonText: 'OK'
-      });
+      setSnackbar({ open: true, message: 'Solicitud de vacaciones guardada correctamente.', severity: 'success' });
     } catch (error) {
       console.error('Error al guardar solicitud de vacaciones:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Error al guardar la solicitud de vacaciones.',
-        confirmButtonText: 'OK'
-      });
+      setSnackbar({ open: true, message: 'Error al guardar la solicitud de vacaciones.', severity: 'error' });
     }
   };
 
@@ -119,6 +111,10 @@ export const VacacionesSolicitud = ({ isOpen, onRequestClose, onVacacionAgregada
   useEffect(() => {
     callApi();
   }, []);
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   return (
     <div className={`popup ${isOpen ? 'show' : ''}`} onClick={handleClickOutside}>
@@ -180,6 +176,11 @@ export const VacacionesSolicitud = ({ isOpen, onRequestClose, onVacacionAgregada
             </Button>
           </div>
         </form>
+        <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+          <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
       </div>
     </div>
   );

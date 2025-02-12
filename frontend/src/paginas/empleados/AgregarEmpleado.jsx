@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { agregarEmpleado, modificarEmpleado } from '../../Utils/Axios';
+import { agregarEmpleado, modificarEmpleado, subirFotoPerfil } from '../../Utils/Axios';
 import './AgregarEmpleado.css';
 import Boton from '../../componentes/Boton/Boton';
 import Swal from 'sweetalert2';
@@ -14,12 +14,12 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado, em
     dni: '',
     email: '',
     puesto: '',
-    rol: '',
+    rol: 'user',
     telefono: '',
     empresa: 0,
-    fotoPerfil: null // Agregar propiedad para la foto de perfil
   });
   const [errors, setErrors] = useState({});
+  const [file, setFile] = useState(null);
 
   useEffect(() => {
     if (isEditMode && empleado) {
@@ -32,10 +32,8 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado, em
         dni: empleado.dni || '',
         email: empleado.email || '',
         puesto: empleado.puesto || '',
-        rol: empleado.rol || '',
         telefono: empleado.telefono || '',
         empresa: empleado.empresa || 0,
-        fotoPerfil: empleado.fotoPerfil || null // Cargar la foto de perfil si existe
       });
     }
   }, [isEditMode, empleado]);
@@ -66,9 +64,6 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado, em
     if (!nuevoEmpleado.puesto) {
       newErrors.puesto = "El puesto es obligatorio.";
     }
-    if (!nuevoEmpleado.rol) {
-      newErrors.rol = "El rol es obligatorio.";
-    }
     if (!nuevoEmpleado.telefono.match(/^\+?\d{1,3}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/)) {
       newErrors.telefono = "El teléfono debe ser un número válido.";
     }
@@ -78,37 +73,41 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado, em
   };
 
   const handleGuardar = async (e) => {
-    e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+    e.preventDefault();
     if (!validateEmpleado()) {
-      return;
+        return;
     }
 
     try {
-      let empleadoData;
-      if (isEditMode) {
-        empleadoData = await modificarEmpleado(nuevoEmpleado);
-        onEmpleadoAgregado(nuevoEmpleado);
-      } else {
-        empleadoData = await agregarEmpleado(nuevoEmpleado);
-        console.log("empleado: ", empleadoData);
-        setNuevoEmpleado(empleadoData);
-        onEmpleadoAgregado(empleadoData); // Usar empleadoData para asegurar que el ID es correcto
-      }
-      onRequestClose();
-      Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Empleado guardado correctamente.',
-        confirmButtonText: 'OK'
-      });
+        let empleadoData;
+        if (isEditMode) {
+            empleadoData = await modificarEmpleado(nuevoEmpleado);
+            onEmpleadoAgregado(nuevoEmpleado);
+          //   if (file) {
+          //     const formData = new FormData();
+          //     formData.append("fotoPerfil", file);
+          //     await subirFotoPerfil(empleadoData.id, formData);
+          // }
+        } else {
+            empleadoData = await agregarEmpleado(nuevoEmpleado);
+            setNuevoEmpleado(empleadoData);
+            onEmpleadoAgregado(empleadoData);
+        }
+        onRequestClose();
+        Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Empleado guardado correctamente.',
+            confirmButtonText: 'OK'
+        });
     } catch (error) {
-      console.error('Error al guardar empleado:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Error al guardar el empleado.',
-        confirmButtonText: 'OK'
-      });
+        console.error('Error al guardar empleado:', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Error al guardar el empleado.',
+            confirmButtonText: 'OK'
+        });
     }
   };
 
@@ -117,14 +116,22 @@ export const AgregarEmpleado = ({ isOpen, onRequestClose, onEmpleadoAgregado, em
     setNuevoEmpleado({ ...nuevoEmpleado, [name]: name === 'legajo' || name === 'edad' ? parseInt(value, 10) : value });
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setNuevoEmpleado({ ...nuevoEmpleado, fotoPerfil: reader.result.split(',')[1] });
-    };
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
     if (file) {
-      reader.readAsDataURL(file);
+        if (file.size > 5 * 1024 * 1024) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                file: 'El archivo no debe pesar más de 5MB',
+            }));
+            setFile(null);
+        } else {
+            setFile(file);
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                file: '',
+            }));
+        }
     }
   };
 

@@ -4,7 +4,7 @@ import LlegadaTarde from './LlegadaTarde';
 import { TextField } from '@mui/material';
 import './Asistencia.css';
 import Boton from '../../componentes/Boton/Boton';
-import Swal from 'sweetalert2';
+import { Snackbar, Alert } from '@mui/material';
 import { BasicDatePicker } from '../../componentes/BasicDatePicker';
 import Inasistencia from './Inasistencia';
 
@@ -15,6 +15,7 @@ export const Asistencia = () => {
   const [mostrarPopup, setMostrarPopup] = useState(false);
   const [mostrarInasistencia, setMostrarInasistencia] = useState(false);
   const [selectedEmpleado, setSelectedEmpleado] = useState(null);
+  const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
 
   useEffect(() => {
     const fetchEmpleados = async () => {
@@ -23,12 +24,7 @@ export const Asistencia = () => {
         setEmpleados(data);
       } catch (error) {
         console.error('Error al obtener empleados:', error);
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Error al obtener empleados.',
-          confirmButtonText: 'OK'
-        });
+        setSnackbar({ open: true, message: 'Error al obtener empleados.', severity: 'error' });
       }
     };
 
@@ -83,21 +79,15 @@ export const Asistencia = () => {
 
     try {
       await registrarAsistencia(asistenciasArray);
-      Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Asistencia registrada correctamente.',
-        confirmButtonText: 'OK'
-      });
+      setSnackbar({ open: true, message: 'Asistencia registrada correctamente.', severity: 'success' });
     } catch (error) {
       console.error('Error al registrar asistencia:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Error al registrar asistencia.',
-        confirmButtonText: 'OK'
-      });
+      setSnackbar({ open: true, message: 'Error al registrar asistencia.', severity: 'error' });
     }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
   };
 
   return (
@@ -173,6 +163,11 @@ export const Asistencia = () => {
             fecha={fecha}
           />
         )}
+        <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+          <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
       </div>
     </>
   );

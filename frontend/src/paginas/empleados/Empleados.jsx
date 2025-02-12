@@ -59,6 +59,7 @@ export const Empleados = () => {
 
   const handleEliminarEmpleado = (id) => {
     setEmpleados((empleados) => empleados.filter(empleado => empleado.id !== id));
+    
   };
 
   const handleOrdenarEmpleados = (empleadosOrdenados) => {

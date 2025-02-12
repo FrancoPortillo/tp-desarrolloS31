@@ -5,10 +5,10 @@ import CloudDownload from '@mui/icons-material/CloudDownload';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Button from '@mui/material/Button';
-import { eliminarPermisoAusencia, obtenerEmpleadoPorEmail, obtenerPermisosAusenciaPorEmpleado, obtenerVacacionesPorEmpleado } from '../../Utils/Axios';
+import { eliminarPermisoAusencia, eliminarVacaciones, obtenerEmpleadoPorEmail, obtenerPermisosAusenciaPorEmpleado, obtenerVacacionesPorEmpleado } from '../../Utils/Axios';
 import Boton from '../../componentes/Boton/Boton';
 import { PedidoSolicitud } from './PedidoSolicitud';
-import { Box, Modal } from '@mui/material';
+import { Box, Modal, Snackbar, Alert } from '@mui/material';
 import VacacionesSolicitud from '../vacaciones/VacacionesSolicitud';
 
 const style = {
@@ -69,9 +69,14 @@ export const SolicitudesEmpleados = () => {
     }
   };
 
-  const deleteRow = async (id) => {
+  const deleteRow = async (permiso) => {
     try {
-      await eliminarPermisoAusencia(id);
+      if(permiso.tipoSolicitud == 'Vacaciones'){
+        await eliminarVacaciones(permiso.id);
+      }else{
+        await eliminarPermisoAusencia(permiso.id);
+      }
+    
       setSnackbar({ open: true, message: "Solicitud eliminada con éxito", severity: "success" });
       callApi();
     } catch (error) {
@@ -81,7 +86,12 @@ export const SolicitudesEmpleados = () => {
 
   const handleVacacionAgregada = (vacacion) => {
     setPermisos([...permisos, { ...vacacion, tipoSolicitud: 'Vacaciones' }]);
+    callApi();
     setOpenVacaciones(false);
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
   };
 
   return (
@@ -121,7 +131,7 @@ export const SolicitudesEmpleados = () => {
                     </Button>
                   )}
                   {permiso.estado === "Pendiente" && 
-                    <Button variant="outlined" color="error" onClick={() => deleteRow(permiso.id)}>
+                    <Button variant="outlined" color="error" onClick={() => deleteRow(permiso)}>
                       <DeleteOutlineIcon fontSize="small" />
                     </Button>
                   }
@@ -182,6 +192,11 @@ export const SolicitudesEmpleados = () => {
           <VacacionesSolicitud isOpen={openVacaciones} onRequestClose={handleCloseVacaciones} onVacacionAgregada={handleVacacionAgregada} idEmpleado={idEmpleado}/>
           </Box>
         </Modal>
+        <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+          <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
       </div>
     </>
   );

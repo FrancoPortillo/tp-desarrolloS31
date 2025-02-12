@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { registrarLlegadaTarde } from '../../Utils/Axios';
 import './LlegadaTarde.css';
-import Swal from 'sweetalert2';
+import { Snackbar, Alert } from '@mui/material';
 
 export const LlegadaTarde = ({ isOpen, onRequestClose, idEmpleado, fecha }) => {
   const [minutosTarde, setMinutosTarde] = useState('');
   const [motivo, setMotivo] = useState('');
   const [errors, setErrors] = useState({});
+  const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
 
   const validateLlegadaTarde = () => {
     const newErrors = {};
@@ -38,21 +39,11 @@ export const LlegadaTarde = ({ isOpen, onRequestClose, idEmpleado, fecha }) => {
 
     try {
       await registrarLlegadaTarde(llegadaTarde);
-      Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Llegada tarde registrada con éxito.',
-        confirmButtonText: 'OK'
-      });
+      setSnackbar({ open: true, message: 'Llegada tarde registrada con éxito.', severity: 'success' });
       onRequestClose();
     } catch (error) {
       console.error('Error al registrar llegada tarde:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Error al registrar llegada tarde.',
-        confirmButtonText: 'OK'
-      });
+      setSnackbar({ open: true, message: 'Error al registrar llegada tarde.', severity: 'error' });
     }
   };
 
@@ -69,6 +60,10 @@ export const LlegadaTarde = ({ isOpen, onRequestClose, idEmpleado, fecha }) => {
     if (e.target.classList.contains('popup')) {
       onRequestClose();
     }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
   };
 
   return (
@@ -95,6 +90,11 @@ export const LlegadaTarde = ({ isOpen, onRequestClose, idEmpleado, fecha }) => {
             <button className="boton-cerrar" type="button" onClick={onRequestClose}>Cerrar</button>
           </div>
         </form>
+        <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+          <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
       </div>
     </div>
   );

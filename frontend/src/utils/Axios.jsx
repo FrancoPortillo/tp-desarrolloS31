@@ -7,6 +7,26 @@ const axiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
 });
+export const subirFotoPerfil = async (id, formData) => {
+  try {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/Empleado/SubirFotoPerfil/${id}`, formData, {
+          headers: {
+              'Content-Type': 'multipart/form-data'
+          }
+      });
+      return response.data;
+  } catch (error) {
+      console.error('Error al subir documento:', error);
+      throw error;
+  }
+};
+
+export const getImage = async (idEmpleado) => {
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/Empleado/ObtenerFotoPerfil/${idEmpleado}`,{
+        responseType: 'blob'
+    });
+    return response.data;
+};
 // Función para agregar un empleado
 export const agregarEmpleado = async (empleado) => {
   try {
@@ -45,6 +65,15 @@ export const eliminarEmpleado = async (id) => {
 export const obtenerEmpleados = async () => {
   try {
     const response = await axiosInstance.get('/Empleado/Obtener');
+    return response.data;
+  } catch (error) {
+    console.error('Error al obtener empleados:', error);
+    throw error;
+  }
+};
+export const obtenerEmpleadosEliminados = async () => {
+  try {
+    const response = await axiosInstance.get('/Empleado/ObtenerEliminados');
     return response.data;
   } catch (error) {
     console.error('Error al obtener empleados:', error);
@@ -206,6 +235,15 @@ export const eliminarPermisoAusencia = async (id) => {
     throw error;
   }
 };
+export const eliminarVacaciones = async (id) => {
+  try {
+    const response = await axiosInstance.delete(`/Vacaciones/Eliminar/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error al eliminar permiso de ausencia:', error);
+    throw error;
+  }
+};
 
 export const obtenerVacaciones = async () => {
   try {
@@ -240,7 +278,34 @@ export const agregarVacaciones = async (vacacion) => {
     const response = await axiosInstance.post('/Vacaciones/Agregar', vacacion);
     return response.data;
   } catch (error) {
-    console.error('Error al agregar permiso de ausencia:', error);
+    console.error('Error al agregar vacaciones:', error);
+    throw error;
+  }
+};
+export const agregarDocumentacion = async (documento) => {
+  try {
+    const response = await axiosInstance.post('/Documentacion/Agregar', documento);
+    return response.data;
+  } catch (error) {
+    console.error('Error al agregar documento:', error);
+    throw error;
+  }
+};
+export const subirDocumentacion = async (idDocumento, archivo) => {
+  try {
+    const response = await axiosInstance.post('/Documentacion/SubirArchivo', idDocumento, archivo);
+    return response.data;
+  } catch (error) {
+    console.error('Error al subir documento:', error);
+    throw error;
+  }
+};
+export const descargarDocumentacion = async (id) => {
+  try {
+    const response = await axiosInstance.get(`/Documentacion/Descargar/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error al descargar documento:', error);
     throw error;
   }
 };
