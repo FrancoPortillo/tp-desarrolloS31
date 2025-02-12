@@ -1,0 +1,31 @@
+.menu {
+    
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    margin-top: 50px;
+}
+.card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+    transition: all 0.7s linear;
+}
+
+.card-body{
+    padding: 2rem 0 !important;
+}
+
+.card-text{
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-top: 100px; /* Separación del título hacia arriba */
+    margin-bottom: 30px; /* Separación del título hacia las tarjetas */
+    font-size: 2.5rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    padding-left: 15px; /* Separación del margen izquierdo */
+  }

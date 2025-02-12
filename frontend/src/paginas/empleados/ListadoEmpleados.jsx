@@ -1,24 +1,12 @@
-import { useEffect, useState } from 'react';
-import { obtenerEmpleados, eliminarEmpleado } from '../../Utils/Axios';
+import { useState } from 'react';
+import { eliminarEmpleado } from '../../Utils/Axios';
 import './Empleados.css';
 import { NavLink } from 'react-router-dom';
+import Boton from '../../componentes/Boton/Boton';
+import Swal from 'sweetalert2';
 
-export const ListadoEmpleados = ({ onAgregarEmpleado }) => {
-  const [empleados, setEmpleados] = useState([]);
+export const ListadoEmpleados = ({ empleados, onAgregarEmpleado, onEliminarEmpleado, onOrdenarEmpleados, currentUserId }) => {
   const [orden, setOrden] = useState({ campo: 'nombre', ascendente: true });
-
-  useEffect(() => {
-    const fetchEmpleados = async () => {
-      try {
-        const data = await obtenerEmpleados();
-        setEmpleados(data);
-      } catch (error) {
-        console.error('Error al obtener empleados:', error);
-      }
-    };
-
-    fetchEmpleados();
-  }, []);
 
   const ordenarPor = (campo) => {
     const nuevaOrden = orden.campo === campo ? !orden.ascendente : true;
@@ -30,15 +18,36 @@ export const ListadoEmpleados = ({ onAgregarEmpleado }) => {
       return 0;
     });
 
-    setEmpleados(empleadosOrdenados);
+    onOrdenarEmpleados(empleadosOrdenados);
   };
 
   const handleEliminar = async (id) => {
+    if (id === currentUserId) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Advertencia',
+        text: 'No puedes eliminar tu propio usuario.',
+        confirmButtonText: 'Entendido'
+      });
+      return;
+    }
     try {
       await eliminarEmpleado(id);
-      setEmpleados(empleados.filter(empleado => empleado.id !== id));
+      onEliminarEmpleado(id);
+      Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Empleado eliminado correctamente.',
+        confirmButtonText: 'OK'
+      });
     } catch (error) {
       console.error('Error al eliminar empleado:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Error al eliminar el empleado.',
+        confirmButtonText: 'OK'
+      });
     }
   };
 
@@ -72,7 +81,7 @@ export const ListadoEmpleados = ({ onAgregarEmpleado }) => {
         </tbody>
       </table>
 
-      <button className="boton-agregar" onClick={onAgregarEmpleado}>Agregar Empleado</button>
+      <Boton texto="Agregar Empleado" onClick={onAgregarEmpleado} />
     </div>
   );
 };

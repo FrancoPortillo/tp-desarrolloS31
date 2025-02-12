@@ -92,6 +92,12 @@
   .boton-cerrar:hover {
     background-color: #ff1a1a;
   }
+  .error {
+    color: red;
+    font-weight: normal;
+    font-size: 0.875em; /* Tamaño de fuente más pequeño */
+    margin-top: 0.25em; /* Espacio entre el campo y el mensaje de error */
+  }
   
   /* Responsividad */
   @media (max-width: 768px) {
